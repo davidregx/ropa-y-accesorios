@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Polos Básicos Hombre - MBO</title>
+    <title>Catálogo Completo - MBO</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -12,7 +12,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
- body {
+  body {
             background-color: #f8f9fa;
             color: #333;
             line-height: 1.6;
@@ -25,7 +25,7 @@
         }
         
         /* Header Styles */
-  header {
+ header {
             background-color: #fff;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             padding: 15px 0;
@@ -34,14 +34,14 @@
             z-index: 100;
         }
         
- .header-top {
+.header-top {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 0 20px;
         }
         
- .logo {
+  .logo {
             font-size: 28px;
             font-weight: 700;
             color: #d32f2f;
@@ -57,23 +57,29 @@
             color: #333;
             font-weight: 500;
             position: relative;
+            padding: 8px 0;
         }
         
  .nav-links a:hover {
             color: #d32f2f;
         }
         
- .nav-links a.active::after {
+ .nav-links a.active {
+            color: #d32f2f;
+            font-weight: 600;
+        }
+        
+  .nav-links a.active::after {
             content: '';
             position: absolute;
-            bottom: -5px;
+            bottom: 0;
             left: 0;
             width: 100%;
             height: 2px;
             background-color: #d32f2f;
         }
         
- .header-icons {
+  .header-icons {
             display: flex;
             gap: 20px;
         }
@@ -97,6 +103,34 @@
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+        
+        /* Banner Styles */
+ .category-banner {
+            height: 300px;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+ .banner-content h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+        
+ .banner-content p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
         }
         
         /* Main Content Styles */
@@ -130,7 +164,7 @@
             width: 100%;
         }
         
- .filter-title {
+  .filter-title {
             font-size: 18px;
             font-weight: 600;
             margin-bottom: 20px;
@@ -147,11 +181,11 @@
             cursor: pointer;
         }
         
-  .filter-section {
+ .filter-section {
             margin-bottom: 25px;
         }
         
-  .filter-section h3 {
+ .filter-section h3 {
             font-size: 14px;
             font-weight: 600;
             margin-bottom: 12px;
@@ -159,7 +193,7 @@
             text-transform: uppercase;
         }
         
-  .filter-options {
+ .filter-options {
             display: flex;
             flex-direction: column;
             gap: 10px;
@@ -171,31 +205,31 @@
             gap: 8px;
         }
         
-  .filter-option input[type="checkbox"] {
+ .filter-option input[type="checkbox"] {
             width: 16px;
             height: 16px;
             cursor: pointer;
         }
         
-  .filter-option label {
+ .filter-option label {
             font-size: 14px;
             cursor: pointer;
             flex: 1;
         }
         
-  .price-range {
+.price-range {
             display: flex;
             justify-content: space-between;
             margin-top: 10px;
         }
         
- .price-range span {
+.price-range span {
             font-size: 13px;
             color: #777;
         }
         
         /* Products Section */
-  .products-section {
+ .products-section {
             flex: 1;
         }
         
@@ -212,12 +246,12 @@
             gap: 15px;
         }
         
-  .products-count {
+ .products-count {
             font-size: 14px;
             color: #555;
         }
         
-  .sort-options {
+ .sort-options {
             display: flex;
             align-items: center;
             gap: 10px;
@@ -283,11 +317,11 @@
             font-weight: 600;
         }
         
-  .product-info {
+ .product-info {
             padding: 15px;
         }
         
-  .product-name {
+ .product-name {
             font-size: 14px;
             color: #555;
             margin-bottom: 8px;
@@ -301,13 +335,13 @@
             gap: 10px;
         }
         
-  .current-price {
+ .current-price {
             font-size: 18px;
             font-weight: 700;
             color: #d32f2f;
         }
         
-  .original-price {
+ .original-price {
             font-size: 14px;
             color: #999;
             text-decoration: line-through;
@@ -319,7 +353,7 @@
             margin-top: 12px;
         }
         
-  .color-option {
+ .color-option {
             width: 20px;
             height: 20px;
             border-radius: 50%;
@@ -328,7 +362,7 @@
             position: relative;
         }
         
-  .color-option.active::after {
+ .color-option.active::after {
             content: '';
             position: absolute;
             top: -3px;
@@ -346,8 +380,13 @@
         .color-option.black { background-color: #333; }
         .color-option.red { background-color: #b22222; }
         .color-option.white { background-color: #f0f0f0; border: 1px solid #ddd; }
+        .color-option.pink { background-color: #ff69b4; }
+        .color-option.purple { background-color: #9370db; }
+        .color-option.green { background-color: #2e8b57; }
+        .color-option.yellow { background-color: #ffd700; }
+        .color-option.gray { background-color: #808080; }
         
-  .add-to-cart {
+ .add-to-cart {
             width: 100%;
             padding: 10px;
             background-color: #333;
@@ -368,94 +407,8 @@
             background-color: #4CAF50;
         }
         
-        /* Footer Styles */
- footer {
-            background-color: #333;
-            color: #fff;
-            padding: 40px 0 20px;
-            margin-top: 50px;
-        }
-        
- .footer-content {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-  .footer-column h3 {
-            font-size: 18px;
-            margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-  .footer-column h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 40px;
-            height: 2px;
-            background-color: #d32f2f;
-        }
-        
-  .footer-column ul {
-            list-style: none;
-        }
-        
-  .footer-column ul li {
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-  .footer-column ul li a {
-            color: #bbb;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
- .footer-column ul li a:hover {
-            color: #fff;
-        }
-        
-  .social-icons {
-            display: flex;
-            gap: 15px;
-            margin-top: 15px;
-        }
-        
- .social-icons a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 36px;
-            height: 36px;
-            background-color: #444;
-            border-radius: 50%;
-            color: #fff;
-            transition: background-color 0.3s;
-        }
-        
- .social-icons a:hover {
-            background-color: #d32f2f;
-        }
-        
-  .copyright {
-            text-align: center;
-            padding-top: 30px;
-            margin-top: 30px;
-            border-top: 1px solid #444;
-            color: #bbb;
-            font-size: 14px;
-        }
-        
         /* Cart Sidebar */
-  .cart-sidebar {
+ .cart-sidebar {
             position: fixed;
             top: 0;
             right: -400px;
@@ -473,7 +426,7 @@
             right: 0;
         }
         
- .cart-header {
+  .cart-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -520,18 +473,18 @@
             flex: 1;
         }
         
-  .cart-item-name {
+ .cart-item-name {
             font-size: 14px;
             margin-bottom: 5px;
         }
         
-  .cart-item-price {
+ .cart-item-price {
             font-weight: 600;
             color: #d32f2f;
             margin-bottom: 8px;
         }
         
-  .cart-item-actions {
+ .cart-item-actions {
             display: flex;
             align-items: center;
             gap: 10px;
@@ -554,7 +507,7 @@
             font-size: 16px;
         }
         
-  .quantity-input {
+ .quantity-input {
             width: 40px;
             height: 30px;
             border: none;
@@ -562,7 +515,7 @@
             font-size: 14px;
         }
         
-  .remove-item {
+ .remove-item {
             color: #d32f2f;
             background: none;
             border: none;
@@ -580,7 +533,7 @@
             font-weight: 600;
         }
         
-  .checkout-btn {
+ .checkout-btn {
             width: 100%;
             padding: 12px;
             background: #d32f2f;
@@ -598,12 +551,12 @@
         }
         
         /* Responsive Styles */
-  @media (max-width: 992px) {
+ @media (max-width: 992px) {
             .main-content {
                 flex-direction: column;
             }
             
-  .filters {
+ .filters {
                 width: 100%;
                 position: fixed;
                 top: 0;
@@ -625,22 +578,18 @@
  .close-filters {
                 display: block;
             }
-            
-  .footer-content {
-                grid-template-columns: repeat(2, 1fr);
-            }
         }
         
- @media (max-width: 768px) {
+  @media (max-width: 768px) {
             .product-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
             
- .nav-links {
+  .nav-links {
                 display: none;
             }
             
-  .header-top {
+ .header-top {
                 flex-wrap: wrap;
                 gap: 15px;
             }
@@ -649,20 +598,24 @@
                 width: 100%;
                 right: -100%;
             }
+            
+ .banner-content h1 {
+                font-size: 32px;
+            }
         }
         
-  @media (max-width: 576px) {
+ @media (max-width: 576px) {
             .product-grid {
                 grid-template-columns: 1fr;
             }
             
- .footer-content {
-                grid-template-columns: 1fr;
-            }
-            
-.products-header {
+ .products-header {
                 flex-direction: column;
                 align-items: flex-start;
+            }
+            
+ .banner-content h1 {
+                font-size: 28px;
             }
         }
     </style>
@@ -673,11 +626,11 @@
         <div class="header-top">
             <div class="logo">MBO</div>
             <div class="nav-links">
-                <a href="#">HOMBRE</a>
-                <a href="#">MUJER</a>
-                <a href="#">NIÑOS</a>
-                <a href="#" class="active">OFERTAS</a>
-                <a href="#">NOVEDADES</a>
+                <a href="#" class="category-link active" data-category="hombre">HOMBRE</a>
+                <a href="#" class="category-link" data-category="mujer">MUJER</a>
+                <a href="#" class="category-link" data-category="ninos">NIÑOS</a>
+                <a href="#" class="category-link" data-category="ofertas">OFERTAS</a>
+                <a href="#" class="category-link" data-category="novedades">NOVEDADES</a>
             </div>
             <div class="header-icons">
                 <i class="fas fa-search"></i>
@@ -689,8 +642,15 @@
         </div>
     </header>
 
-<div class="container">
-        <button class="filter-toggle" id="filterToggle">
+ <div class="container">
+        <div class="category-banner">
+            <div class="banner-content">
+                <h1>MODA PARA HOMBRE</h1>
+                <p>Descubre nuestra colección de polos, camisas y más prendas básicas con estilo</p>
+            </div>
+        </div>
+        
+ <button class="filter-toggle" id="filterToggle">
             <i class="fas fa-filter"></i> Filtrar Productos
         </button>
         
@@ -703,7 +663,7 @@
                     <span class="close-filters" id="closeFilters">&times;</span>
                 </h2>
                 
-<div class="filter-section">
+  <div class="filter-section">
                     <h3>DISPONIBILIDAD</h3>
                     <div class="filter-options">
                         <div class="filter-option">
@@ -735,7 +695,7 @@
                     </div>
                 </div>
                 
-  <div class="filter-section">
+ <div class="filter-section">
                     <h3>COLOR</h3>
                     <div class="filter-options">
                         <div class="filter-option">
@@ -787,9 +747,9 @@
             </aside>
             
             <!-- Products Section -->
-<section class="products-section">
+ <section class="products-section">
                 <div class="products-header">
-                    <div class="products-count">76 artículos</div>
+                    <div class="products-count">8 artículos</div>
                     <div class="sort-options">
                         <label for="sort">Ordenar por:</label>
                         <select id="sort">
@@ -810,7 +770,7 @@
     </div>
     
     <!-- Cart Sidebar -->
-<div class="cart-sidebar" id="cartSidebar">
+ <div class="cart-sidebar" id="cartSidebar">
         <div class="cart-header">
             <h2>Tu Carrito</h2>
             <span class="close-cart" id="closeCart">&times;</span>
@@ -825,183 +785,620 @@
         <button class="checkout-btn">Proceder al Pago</button>
     </div>
     
-    <!-- Footer -->
-<footer>
-        <div class="footer-content">
-            <div class="footer-column">
-                <h3>MBO</h3>
-                <ul>
-                    <li><a href="#">Quiénes somos</a></li>
-                    <li><a href="#">Nuestras tiendas</a></li>
-                    <li><a href="#">Trabaja con nosotros</a></li>
-                    <li><a href="#">Responsabilidad social</a></li>
-                </ul>
-            </div>
-            
- <div class="footer-column">
-                <h3>Servicio al cliente</h3>
-                <ul>
-                    <li><a href="#">Preguntas frecuentes</a></li>
-                    <li><a href="#">Cambios y devoluciones</a></li>
-                    <li><a href="#">Términos y condiciones</a></li>
-                    <li><a href="#">Política de privacidad</a></li>
-                </ul>
-            </div>
-            
- <div class="footer-column">
-                <h3>Contáctanos</h3>
-                <ul>
-                    <li><i class="fas fa-phone"></i> (01) 640-9999</li>
-                    <li><i class="fas fa-envelope"></i> servicioalcliente@mbo.com.pe</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Tiendas a nivel nacional</li>
-                </ul>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-tiktok"></i></a>
-                </div>
-            </div>
-            
- <div class="footer-column">
-                <h3>Suscríbete</h3>
-                <p>Recibe nuestras promociones y novedades</p>
-                <form style="margin-top: 15px;">
-                    <input type="email" placeholder="Tu correo electrónico" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 4px; border: none;">
-                    <button type="submit" style="width: 100%; padding: 10px; background-color: #d32f2f; color: white; border: none; border-radius: 4px; cursor: pointer;">Suscribirme</button>
-                </form>
-            </div>
-        </div>
-        
- <div class="copyright">
-            © 2023 MBO - Todos los derechos reservados
-        </div>
-    </footer>
-    
  <script>
-        // Product data with base names and color parts
-        const products = [
-            {
-                id: 1,
-                baseName: "FOLO MANGA CORTA BASICO CUELLO RE-DONDO",
-                colorPart: "VERDE OLIVO",
-                code: "0125",
-                price: 79.00,
-                promo: "3 x 7,00",
-                colors: ["olive", "brown", "mustard"],
-                colorNames: ["VERDE OLIVO", "MARRÓN", "MOSTAZA"],
-                type: "polo",
-                availability: "stock",
-                color: "olive",
-                priceRange: "price2",
-                image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M60,50 L140,50 L160,80 L160,170 L40,170 L40,80 Z' fill='%23556B2F'/%3E%3Ccircle cx='100' cy='90' r='20' fill='white'/%3E%3C/svg%3E"
-            },
-            {
-                id: 2,
-                baseName: "FOLO MANGA CORTA BASICO CUELLO RE-DONDO",
-                colorPart: "MARRÓN",
-                code: "0125",
-                price: 79.00,
-                promo: "3 x 6,00",
-                colors: ["olive", "brown", "mustard"],
-                colorNames: ["VERDE OLIVO", "MARRÓN", "MOSTAZA"],
-                type: "polo",
-                availability: "stock",
-                color: "brown",
-                priceRange: "price2",
-                image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M60,50 L140,50 L160,80 L160,170 L40,170 L40,80 Z' fill='%238B4513'/%3E%3Ccircle cx='100' cy='90' r='20' fill='white'/%3E%3C/svg%3E"
-            },
-            {
-                id: 3,
-                baseName: "FOLO MANGA CORTA BASICO CUELLO RE-DONDO",
-                colorPart: "MOSTAZA",
-                code: "0125",
-                price: 79.00,
-                promo: "3 x 6,00",
-                colors: ["olive", "brown", "mustard"],
-                colorNames: ["VERDE OLIVO", "MARRÓN", "MOSTAZA"],
-                type: "polo",
-                availability: "stock",
-                color: "mustard",
-                priceRange: "price2",
-                image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M60,50 L140,50 L160,80 L160,170 L40,170 L40,80 Z' fill='%23FFDB58'/%3E%3Ccircle cx='100' cy='90' r='20' fill='white'/%3E%3C/svg%3E"
-            },
-            {
-                id: 4,
-                baseName: "FOLO MANGA CORTA BASICO CUELLO RE-DONDO",
-                colorPart: "AZUL MARINO",
-                code: "0125",
-                price: 79.00,
-                promo: "3 x 7,00",
-                colors: ["olive", "blue", "mustard"],
-                colorNames: ["VERDE OLIVO", "AZUL MARINO", "MOSTAZA"],
-                type: "polo",
-                availability: "stock",
-                color: "blue",
-                priceRange: "price2",
-                image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M60,50 L140,50 L160,80 L160,170 L40,170 L40,80 Z' fill='%231e3c72'/%3E%3Ccircle cx='100' cy='90' r='20' fill='white'/%3E%3C/svg%3E"
-            },
-            {
-                id: 5,
-                baseName: "FOLO MANGA CORTA BASICO CUELLO RE-DONDO",
-                colorPart: "NEGRO",
-                code: "0125",
-                price: 79.00,
-                promo: "3 x 7,00",
-                colors: ["black", "brown", "mustard"],
-                colorNames: ["NEGRO", "MARRÓN", "MOSTAZA"],
-                type: "polo",
-                availability: "stock",
-                color: "black",
-                priceRange: "price2",
-                image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M60,50 L140,50 L160,80 L160,170 L40,170 L40,80 Z' fill='%23333'/%3E%3Ccircle cx='100' cy='90' r='20' fill='white'/%3E%3C/svg%3E"
-            },
-            {
-                id: 6,
-                baseName: "FOLO MANGA CORTA BASICO CUELLO RE-DONDO",
-                colorPart: "ROJO",
-                code: "0125",
-                price: 79.00,
-                promo: "3 x 7,00",
-                colors: ["red", "olive", "mustard"],
-                colorNames: ["ROJO", "VERDE OLIVO", "MOSTAZA"],
-                type: "polo",
-                availability: "stock",
-                color: "red",
-                priceRange: "price2",
-                image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M60,50 L140,50 L160,80 L160,170 L40,170 L40,80 Z' fill='%23b22222'/%3E%3Ccircle cx='100' cy='90' r='20' fill='white'/%3E%3C/svg%3E"
-            },
-            {
-                id: 7,
-                baseName: "CAMISA MANGA LARGA CUADROS",
-                colorPart: "AZUL Y BLANCO",
-                code: "",
-                price: 99.00,
-                promo: "2 x 85,00",
-                colors: ["blue", "white"],
-                colorNames: ["AZUL MARINO", "BLANCO"],
-                type: "camisa",
-                availability: "stock",
-                color: "blue",
-                priceRange: "price3",
-                image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M60,50 L140,50 L160,80 L160,170 L40,170 L40,80 Z' fill='%231e3c72'/%3E%3Crect x='60' y='80' width='80' height='90' fill='white'/%3E%3C/svg%3E"
-            },
-            {
-                id: 8,
-                baseName: "PANTALÓN JEANS SLIM FIT",
-                colorPart: "AZUL OSCURO",
-                code: "",
-                price: 129.00,
-                promo: "",
-                colors: ["blue"],
-                colorNames: ["AZUL MARINO"],
-                type: "pantalon",
-                availability: "preorder",
-                color: "blue",
-                priceRange: "price3",
-                image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M80,50 L120,50 L140,150 L60,150 Z' fill='%231e3c72'/%3E%3C/svg%3E"
-            }
-        ];
+        // Product data by category
+        const categories = {
+            hombre: [
+                {
+                    id: 1,
+                    baseName: "POLO MANGA CORTA BÁSICO",
+                    colorPart: "VERDE OLIVO",
+                    code: "0125",
+                    price: 79.00,
+                    promo: "3 x 7,00",
+                    colors: ["olive", "brown", "mustard"],
+                    colorNames: ["VERDE OLIVO", "MARRÓN", "MOSTAZA"],
+                    type: "polo",
+                    availability: "stock",
+                    color: "olive",
+                    priceRange: "price2",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M60,50 L140,50 L160,80 L160,170 L40,170 L40,80 Z' fill='%23556B2F'/%3E%3Ccircle cx='100' cy='90' r='20' fill='white'/%3E%3C/svg%3E"
+                },
+                {
+                    id: 2,
+                    baseName: "POLO CUADROS MANGA CORTA",
+                    colorPart: "AZUL MARINO",
+                    code: "0231",
+                    price: 89.00,
+                    promo: "2 x 80,00",
+                    colors: ["blue", "white"],
+                    colorNames: ["AZUL MARINO", "BLANCO"],
+                    type: "polo",
+                    availability: "stock",
+                    color: "blue",
+                    priceRange: "price2",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M60,50 L140,50 L160,80 L160,170 L40,170 L40,80 Z' fill='%231e3c72'/%3E%3Crect x='60' y='80' width='80' height='90' fill='white'/%3E%3C/svg%3E"
+                },
+                {
+                    id: 3,
+                    baseName: "CAMISA FORMAL MANGA LARGA",
+                    colorPart: "BLANCO",
+                    code: "0456",
+                    price: 129.00,
+                    promo: "",
+                    colors: ["white", "blue"],
+                    colorNames: ["BLANCO", "AZUL MARINO"],
+                    type: "camisa",
+                    availability: "stock",
+                    color: "white",
+                    priceRange: "price3",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M60,50 L140,50 L160,80 L160,170 L40,170 L40,80 Z' fill='white'/%3E%3C/svg%3E"
+                },
+                {
+                    id: 4,
+                    baseName: "JEANS SLIM FIT",
+                    colorPart: "AZUL OSCURO",
+                    code: "0789",
+                    price: 149.00,
+                    promo: "3 x 130,00",
+                    colors: ["blue", "black"],
+                    colorNames: ["AZUL OSCURO", "NEGRO"],
+                    type: "pantalon",
+                    availability: "stock",
+                    color: "blue",
+                    priceRange: "price3",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M80,50 L120,50 L140,150 L60,150 Z' fill='%231e3c72'/%3E%3C/svg%3E"
+                },
+                {
+                    id: 5,
+                    baseName: "POLO RAYAS HORIZONTALES",
+                    colorPart: "ROJO Y BLANCO",
+                    code: "0532",
+                    price: 85.00,
+                    promo: "3 x 7,50",
+                    colors: ["red", "blue"],
+                    colorNames: ["ROJO Y BLANCO", "AZUL Y BLANCO"],
+                    type: "polo",
+                    availability: "stock",
+                    color: "red",
+                    priceRange: "price2",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M60,50 L140,50 L160,80 L160,170 L40,170 L40,80 Z' fill='%23b22222'/%3E%3Crect x='60' y='90' width='80' height='10' fill='white'/%3E%3Crect x='60' y='110' width='80' height='10' fill='white'/%3E%3Crect x='60' y='130' width='80' height='10' fill='white'/%3E%3C/svg%3E"
+                },
+                {
+                    id: 6,
+                    baseName: "SUETER LIGERO",
+                    colorPart: "GRIS",
+                    code: "0612",
+                    price: 119.00,
+                    promo: "2 x 100,00",
+                    colors: ["gray", "black"],
+                    colorNames: ["GRIS", "NEGRO"],
+                    type: "sueter",
+                    availability: "stock",
+                    color: "gray",
+                    priceRange: "price3",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M60,30 L140,30 L160,70 L160,170 L40,170 L40,70 Z' fill='%23808080'/%3E%3C/svg%3E"
+                },
+                {
+                    id: 7,
+                    baseName: "SHORT DEPORTIVO",
+                    colorPart: "NEGRO",
+                    code: "0987",
+                    price: 65.00,
+                    promo: "3 x 6,00",
+                    colors: ["black", "blue"],
+                    colorNames: ["NEGRO", "AZUL MARINO"],
+                    type: "short",
+                    availability: "stock",
+                    color: "black",
+                    priceRange: "price1",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M80,50 L120,50 L140,100 L60,100 Z' fill='%23333'/%3E%3C/svg%3E"
+                },
+                {
+                    id: 8,
+                    baseName: "CAMISETA ESTAMPADA",
+                    colorPart: "BLANCO",
+                    code: "0128",
+                    price: 69.00,
+                    promo: "3 x 6,50",
+                    colors: ["white", "black"],
+                    colorNames: ["BLANCO", "NEGRO"],
+                    type: "camiseta",
+                    availability: "stock",
+                    color: "white",
+                    priceRange: "price1",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M60,50 L140,50 L160,80 L160,170 L40,170 L40,80 Z' fill='white'/%3E%3Ccircle cx='100' cy='100' r='30' fill='%23d32f2f'/%3E%3C/svg%3E"
+                }
+            ],
+            mujer: [
+                {
+                    id: 9,
+                    baseName: "VESTIDO FLOREADO",
+                    colorPart: "ROSA",
+                    code: "M201",
+                    price: 129.00,
+                    promo: "2 x 110,00",
+                    colors: ["pink", "purple"],
+                    colorNames: ["ROSA", "LILA"],
+                    type: "vestido",
+                    availability: "stock",
+                    color: "pink",
+                    priceRange: "price3",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M100,30 Q150,70 100,120 Q50,70 100,30 Z' fill='%23ff69b4'/%3E%3C/svg%3E"
+                },
+                {
+                    id: 10,
+                    baseName: "BLUSA DE ENCAJE",
+                    colorPart: "BLANCO",
+                    code: "M305",
+                    price: 89.00,
+                    promo: "",
+                    colors: ["white", "black"],
+                    colorNames: ["BLANCO", "NEGRO"],
+                    type: "blusa",
+                    availability: "stock",
+                    color: "white",
+                    priceRange: "price2",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M60,50 L140,50 L160,80 L160,170 L40,170 L40,80 Z' fill='white'/%3E%3C/svg%3E"
+                },
+                {
+                    id: 11,
+                    baseName: "FALDA PLISADA",
+                    colorPart: "NEGRO",
+                    code: "M412",
+                    price: 75.00,
+                    promo: "3 x 6,50",
+                    colors: ["black", "red"],
+                    colorNames: ["NEGRO", "ROJO"],
+                    type: "falda",
+                    availability: "stock",
+                    color: "black",
+                    priceRange: "price1",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M80,50 L120,50 L140,150 L60,150 Z' fill='%23333'/%3E%3C/svg%3E"
+                },
+                {
+                    id: 12,
+                    baseName: "JEANS SKINNY",
+                    colorPart: "AZUL CLARO",
+                    code: "M523",
+                    price: 99.00,
+                    promo: "",
+                    colors: ["blue", "black"],
+                    colorNames: ["AZUL CLARO", "NEGRO"],
+                    type: "pantalon",
+                    availability: "stock",
+                    color: "blue",
+                    priceRange: "price2",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M80,50 L120,50 L140,150 L60,150 Z' fill='%234b7bec'/%3E%3C/svg%3E"
+                },
+                {
+                    id: 13,
+                    baseName: "TOP CROP",
+                    colorPart: "AMARILLO",
+                    code: "M615",
+                    price: 55.00,
+                    promo: "3 x 5,00",
+                    colors: ["yellow", "pink"],
+                    colorNames: ["AMARILLO", "ROSA"],
+                    type: "top",
+                    availability: "stock",
+                    color: "yellow",
+                    priceRange: "price1",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M80,100 L120,100 L130,150 L70,150 Z' fill='%23ffd700'/%3E%3C/svg%3E"
+                },
+                {
+                    id: 14,
+                    baseName: "CARDIGAN LIGERO",
+                    colorPart: "BEIGE",
+                    code: "M704",
+                    price: 109.00,
+                    promo: "2 x 95,00",
+                    colors: ["brown", "gray"],
+                    colorNames: ["BEIGE", "GRIS"],
+                    type: "cardigan",
+                    availability: "stock",
+                    color: "brown",
+                    priceRange: "price3",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M60,30 L140,30 L160,70 L160,170 L40,170 L40,70 Z' fill='%238B4513'/%3E%3C/svg%3E"
+                },
+                {
+                    id: 15,
+                    baseName: "VESTIDO DE VERANO",
+                    colorPart: "AZUL",
+                    code: "M808",
+                    price: 139.00,
+                    promo: "",
+                    colors: ["blue", "green"],
+                    colorNames: ["AZUL", "VERDE"],
+                    type: "vestido",
+                    availability: "stock",
+                    color: "blue",
+                    priceRange: "price3",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M100,30 Q150,70 100,150 Q50,70 100,30 Z' fill='%231e3c72'/%3E%3C/svg%3E"
+                },
+                {
+                    id: 16,
+                    baseName: "SHORT JEANS",
+                    colorPart: "AZUL DESGASTADO",
+                    code: "M912",
+                    price: 79.00,
+                    promo: "3 x 7,00",
+                    colors: ["blue", "black"],
+                    colorNames: ["AZUL DESGASTADO", "NEGRO"],
+                    type: "short",
+                    availability: "stock",
+                    color: "blue",
+                    priceRange: "price2",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M80,50 L120,50 L140,100 L60,100 Z' fill='%234b7bec'/%3E%3C/svg%3E"
+                }
+            ],
+            ninos: [
+                {
+                    id: 17,
+                    baseName: "POLO NIÑO ESTAMPADO",
+                    colorPart: "ROJO",
+                    code: "N101",
+                    price: 45.00,
+                    promo: "3 x 4,00",
+                    colors: ["red", "blue"],
+                    colorNames: ["ROJO", "AZUL"],
+                    type: "polo",
+                    availability: "stock",
+                    color: "red",
+                    priceRange: "price1",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M60,50 L140,50 L160,80 L160,170 L40,170 L40,80 Z' fill='%23b22222'/%3E%3Ccircle cx='100' cy='100' r='20' fill='yellow'/%3E%3C/svg%3E"
+                },
+                {
+                    id: 18,
+                    baseName: "JEANS NIÑO",
+                    colorPart: "AZUL",
+                    code: "N205",
+                    price: 65.00,
+                    promo: "2 x 60,00",
+                    colors: ["blue", "black"],
+                    colorNames: ["AZUL", "NEGRO"],
+                    type: "pantalon",
+                    availability: "stock",
+                    color: "blue",
+                    priceRange: "price1",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M80,50 L120,50 L140,150 L60,150 Z' fill='%234b7bec'/%3E%3C/svg%3E"
+                },
+                {
+                    id: 19,
+                    baseName: "VESTIDO NIÑA FLORES",
+                    colorPart: "ROSA",
+                    code: "N312",
+                    price: 59.00,
+                    promo: "3 x 5,50",
+                    colors: ["pink", "purple"],
+                    colorNames: ["ROSA", "LILA"],
+                    type: "vestido",
+                    availability: "stock",
+                    color: "pink",
+                    priceRange: "price1",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M100,30 Q150,70 100,120 Q50,70 100,30 Z' fill='%23ff69b4'/%3E%3Ccircle cx='120' cy='80' r='8' fill='white'/%3E%3Ccircle cx='140' cy='100' r='8' fill='white'/%3E%3C/svg%3E"
+                },
+                {
+                    id: 20,
+                    baseName: "SUETER NIÑO",
+                    colorPart: "VERDE",
+                    code: "N408",
+                    price: 55.00,
+                    promo: "",
+                    colors: ["green", "blue"],
+                    colorNames: ["VERDE", "AZUL"],
+                    type: "sueter",
+                    availability: "stock",
+                    color: "green",
+                    priceRange: "price1",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M60,30 L140,30 L160,70 L160,170 L40,170 L40,70 Z' fill='%232e8b57'/%3E%3C/svg%3E"
+                },
+                {
+                    id: 21,
+                    baseName: "CAMISETA NIÑO SUPERHÉROE",
+                    colorPart: "AZUL",
+                    code: "N516",
+                    price: 39.00,
+                    promo: "3 x 3,50",
+                    colors: ["blue", "red"],
+                    colorNames: ["AZUL", "ROJO"],
+                    type: "camiseta",
+                    availability: "stock",
+                    color: "blue",
+                    priceRange: "price1",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M60,50 L140,50 L160,80 L160,170 L40,170 L40,80 Z' fill='%234b7bec'/%3E%3Cpath d='M100,80 L120,120 L100,140 L80,120 Z' fill='yellow'/%3E%3C/svg%3E"
+                },
+                {
+                    id: 22,
+                    baseName: "FALDA NIÑA",
+                    colorPart: "AMARILLO",
+                    code: "N624",
+                    price: 49.00,
+                    promo: "",
+                    colors: ["yellow", "pink"],
+                    colorNames: ["AMARILLO", "ROSA"],
+                    type: "falda",
+                    availability: "stock",
+                    color: "yellow",
+                    priceRange: "price1",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M80,50 L120,50 L140,120 L60,120 Z' fill='%23ffd700'/%3E%3C/svg%3E"
+                },
+                {
+                    id: 23,
+                    baseName: "CHAQUETA NIÑO",
+                    colorPart: "ROJO",
+                    code: "N732",
+                    price: 89.00,
+                    promo: "2 x 80,00",
+                    colors: ["red", "black"],
+                    colorNames: ["ROJO", "NEGRO"],
+                    type: "chaqueta",
+                    availability: "stock",
+                    color: "red",
+                    priceRange: "price2",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M60,30 L140,30 L160,70 L160,170 L40,170 L40,70 Z' fill='%23b22222'/%3E%3C/svg%3E"
+                },
+                {
+                    id: 24,
+                    baseName: "PANTALÓN NIÑA",
+                    colorPart: "ROSA",
+                    code: "N840",
+                    price: 59.00,
+                    promo: "3 x 5,50",
+                    colors: ["pink", "purple"],
+                    colorNames: ["ROSA", "LILA"],
+                    type: "pantalon",
+                    availability: "stock",
+                    color: "pink",
+                    priceRange: "price1",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M80,50 L120,50 L140,150 L60,150 Z' fill='%23ff69b4'/%3E%3C/svg%3E"
+                }
+            ],
+            ofertas: [
+                {
+                    id: 25,
+                    baseName: "POLO OFERTA ESPECIAL",
+                    colorPart: "NEGRO",
+                    code: "OF001",
+                    price: 39.00,
+                    promo: "3 x 3,50",
+                    colors: ["black", "gray"],
+                    colorNames: ["NEGRO", "GRIS"],
+                    type: "polo",
+                    availability: "stock",
+                    color: "black",
+                    priceRange: "price1",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M60,50 L140,50 L160,80 L160,170 L40,170 L40,80 Z' fill='%23333'/%3E%3C/svg%3E"
+                },
+                {
+                    id: 26,
+                    baseName: "JEANS OFERTA",
+                    colorPart: "AZUL",
+                    code: "OF102",
+                    price: 79.00,
+                    promo: "2 x 70,00",
+                    colors: ["blue", "black"],
+                    colorNames: ["AZUL", "NEGRO"],
+                    type: "pantalon",
+                    availability: "stock",
+                    color: "blue",
+                    priceRange: "price2",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M80,50 L120,50 L140,150 L60,150 Z' fill='%231e3c72'/%3E%3C/svg%3E"
+                },
+                {
+                    id: 27,
+                    baseName: "CAMISA OFERTA",
+                    colorPart: "BLANCO",
+                    code: "OF203",
+                    price: 59.00,
+                    promo: "3 x 5,50",
+                    colors: ["white", "blue"],
+                    colorNames: ["BLANCO", "AZUL"],
+                    type: "camisa",
+                    availability: "stock",
+                    color: "white",
+                    priceRange: "price1",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M60,50 L140,50 L160,80 L160,170 L40,170 L40,80 Z' fill='white'/%3E%3C/svg%3E"
+                },
+                {
+                    id: 28,
+                    baseName: "CHAQUETA OFERTA",
+                    colorPart: "GRIS",
+                    code: "OF304",
+                    price: 99.00,
+                    promo: "2 x 90,00",
+                    colors: ["gray", "black"],
+                    colorNames: ["GRIS", "NEGRO"],
+                    type: "chaqueta",
+                    availability: "stock",
+                    color: "gray",
+                    priceRange: "price2",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M60,30 L140,30 L160,70 L160,170 L40,170 L40,70 Z' fill='%23808080'/%3E%3C/svg%3E"
+                },
+                {
+                    id: 29,
+                    baseName: "VESTIDO OFERTA",
+                    colorPart: "ROJO",
+                    code: "OF405",
+                    price: 89.00,
+                    promo: "",
+                    colors: ["red", "black"],
+                    colorNames: ["ROJO", "NEGRO"],
+                    type: "vestido",
+                    availability: "stock",
+                    color: "red",
+                    priceRange: "price2",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M100,30 Q150,70 100,150 Q50,70 100,30 Z' fill='%23b22222'/%3E%3C/svg%3E"
+                },
+                {
+                    id: 30,
+                    baseName: "ZAPATOS OFERTA",
+                    colorPart: "NEGRO",
+                    code: "OF506",
+                    price: 129.00,
+                    promo: "2 x 110,00",
+                    colors: ["black", "brown"],
+                    colorNames: ["NEGRO", "MARRÓN"],
+                    type: "zapatos",
+                    availability: "stock",
+                    color: "black",
+                    priceRange: "price3",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M70,150 Q90,100 130,100 Q150,150 70,150 Z' fill='%23333'/%3E%3C/svg%3E"
+                },
+                {
+                    id: 31,
+                    baseName: "BOLSO OFERTA",
+                    colorPart: "MARRÓN",
+                    code: "OF607",
+                    price: 79.00,
+                    promo: "3 x 7,00",
+                    colors: ["brown", "black"],
+                    colorNames: ["MARRÓN", "NEGRO"],
+                    type: "bolso",
+                    availability: "stock",
+                    color: "brown",
+                    priceRange: "price2",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Crect x='80' y='80' width='40' height='60' rx='5' fill='%238B4513'/%3E%3Crect x='70' y='70' width='60' height='20' rx='5' fill='%238B4513'/%3E%3C/svg%3E"
+                },
+                {
+                    id: 32,
+                    baseName: "GORRA OFERTA",
+                    colorPart: "AZUL",
+                    code: "OF708",
+                    price: 29.00,
+                    promo: "3 x 2,50",
+                    colors: ["blue", "red"],
+                    colorNames: ["AZUL", "ROJO"],
+                    type: "gorra",
+                    availability: "stock",
+                    color: "blue",
+                    priceRange: "price1",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M70,100 Q100,50 130,100 L130,120 L70,120 Z' fill='%231e3c72'/%3E%3C/svg%3E"
+                }
+            ],
+            novedades: [
+                {
+                    id: 33,
+                    baseName: "POLO ULTRA LIGERO",
+                    colorPart: "VERDE MENTA",
+                    code: "NV001",
+                    price: 89.00,
+                    promo: "3 x 8,00",
+                    colors: ["green", "blue"],
+                    colorNames: ["VERDE MENTA", "AZUL CIELO"],
+                    type: "polo",
+                    availability: "stock",
+                    color: "green",
+                    priceRange: "price2",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M60,50 L140,50 L160,80 L160,170 L40,170 L40,80 Z' fill='%2338c172'/%3E%3C/svg%3E"
+                },
+                {
+                    id: 34,
+                    baseName: "JEANS ROTO",
+                    colorPart: "AZUL CLARO",
+                    code: "NV102",
+                    price: 139.00,
+                    promo: "",
+                    colors: ["blue", "black"],
+                    colorNames: ["AZUL CLARO", "NEGRO"],
+                    type: "pantalon",
+                    availability: "stock",
+                    color: "blue",
+                    priceRange: "price3",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M80,50 L120,50 L140,150 L60,150 Z' fill='%234b7bec'/%3E%3Crect x='100' y='100' width='20' height='30' fill='white'/%3E%3C/svg%3E"
+                },
+                {
+                    id: 35,
+                    baseName: "CAMISA ESTAMPADA FLORES",
+                    colorPart: "BLANCO Y ROSA",
+                    code: "NV203",
+                    price: 109.00,
+                    promo: "2 x 100,00",
+                    colors: ["pink", "white"],
+                    colorNames: ["BLANCO Y ROSA", "BLANCO Y AZUL"],
+                    type: "camisa",
+                    availability: "stock",
+                    color: "pink",
+                    priceRange: "price3",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M60,50 L140,50 L160,80 L160,170 L40,170 L40,80 Z' fill='white'/%3E%3Ccircle cx='100' cy='100' r='10' fill='%23ff69b4'/%3E%3Ccircle cx='130' cy='80' r='8' fill='%23ff69b4'/%3E%3Ccircle cx='80' cy='130' r='8' fill='%23ff69b4'/%3E%3C/svg%3E"
+                },
+                {
+                    id: 36,
+                    baseName: "ABRIGO ULTRA LIGERO",
+                    colorPart: "BEIGE",
+                    code: "NV304",
+                    price: 199.00,
+                    promo: "",
+                    colors: ["brown", "gray"],
+                    colorNames: ["BEIGE", "GRIS"],
+                    type: "abrigo",
+                    availability: "stock",
+                    color: "brown",
+                    priceRange: "price3",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M60,30 L140,30 L160,70 L160,170 L40,170 L40,70 Z' fill='%238B4513'/%3E%3C/svg%3E"
+                },
+                {
+                    id: 37,
+                    baseName: "VESTIDO LARGO",
+                    colorPart: "NEGRO",
+                    code: "NV405",
+                    price: 149.00,
+                    promo: "2 x 130,00",
+                    colors: ["black", "red"],
+                    colorNames: ["NEGRO", "ROJO"],
+                    type: "vestido",
+                    availability: "stock",
+                    color: "black",
+                    priceRange: "price3",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M100,30 Q150,70 100,170 Q50,70 100,30 Z' fill='%23333'/%3E%3C/svg%3E"
+                },
+                {
+                    id: 38,
+                    baseName: "ZAPATILLAS DEPORTIVAS",
+                    colorPart: "BLANCO Y NEGRO",
+                    code: "NV506",
+                    price: 169.00,
+                    promo: "",
+                    colors: ["black", "white"],
+                    colorNames: ["BLANCO Y NEGRO", "NEGRO Y ROJO"],
+                    type: "zapatillas",
+                    availability: "stock",
+                    color: "black",
+                    priceRange: "price3",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M70,150 Q90,100 130,100 Q150,150 70,150 Z' fill='white'/%3E%3Cpath d='M80,140 Q100,100 120,100 Q130,130 80,140 Z' fill='%23333'/%3E%3C/svg%3E"
+                },
+                {
+                    id: 39,
+                    baseName: "BUFANDA DE LANA",
+                    colorPart: "GRIS Y BLANCO",
+                    code: "NV607",
+                    price: 49.00,
+                    promo: "3 x 4,50",
+                    colors: ["gray", "red"],
+                    colorNames: ["GRIS Y BLANCO", "ROJO Y NEGRO"],
+                    type: "bufanda",
+                    availability: "stock",
+                    color: "gray",
+                    priceRange: "price1",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Crect x='80' y='90' width='40' height='20' fill='%23808080'/%3E%3Crect x='80' y='110' width='40' height='20' fill='white'/%3E%3Crect x='80' y='130' width='40' height='20' fill='%23808080'/%3E%3C/svg%3E"
+                },
+                {
+                    id: 40,
+                    baseName: "GORRO DE INVIERNO",
+                    colorPart: "AZUL MARINO",
+                    code: "NV708",
+                    price: 39.00,
+                    promo: "3 x 3,50",
+                    colors: ["blue", "black"],
+                    colorNames: ["AZUL MARINO", "NEGRO"],
+                    type: "gorro",
+                    availability: "stock",
+                    color: "blue",
+                    priceRange: "price1",
+                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Ccircle cx='100' cy='80' r='40' fill='%231e3c72'/%3E%3Crect x='60' y='80' width='80' height='50' fill='%231e3c72'/%3E%3C/svg%3E"
+                }
+            ]
+        };
 
         // Shopping cart
         let cart = [];
@@ -1020,18 +1417,15 @@
         const cartTotal = document.getElementById('cartTotal');
         const cartCount = document.querySelector('.cart-count');
         const filterChecks = document.querySelectorAll('.filter-check');
+        const categoryLinks = document.querySelectorAll('.category-link');
+        const bannerContent = document.querySelector('.banner-content');
         
-        // Filter state
-        const filterState = {
-            availability: ['stock'],
-            type: ['polo'],
-            color: ['olive', 'brown', 'mustard'],
-            price: ['price2']
-        };
+        // Current category
+        let currentCategory = 'hombre';
         
         // Initialize the page
         function init() {
-            renderProducts(products);
+            renderProducts(categories[currentCategory]);
             setupEventListeners();
             updateCartCount();
         }
@@ -1067,6 +1461,55 @@
             filterChecks.forEach(check => {
                 check.addEventListener('change', updateFilterState);
             });
+            
+            // Category links
+            categoryLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    
+                    // Update active category
+                    categoryLinks.forEach(l => l.classList.remove('active'));
+                    link.classList.add('active');
+                    
+                    // Set new category
+                    currentCategory = link.dataset.category;
+                    
+                    // Update banner
+                    updateBanner(currentCategory);
+                    
+                    // Render products
+                    renderProducts(categories[currentCategory]);
+                });
+            });
+        }
+        
+        // Update banner based on category
+        function updateBanner(category) {
+            const banners = {
+                hombre: {
+                    title: "MODA PARA HOMBRE",
+                    description: "Descubre nuestra colección de polos, camisas y más prendas básicas con estilo"
+                },
+                mujer: {
+                    title: "MODA PARA MUJER",
+                    description: "Encuentra las últimas tendencias en vestidos, blusas y accesorios femeninos"
+                },
+                ninos: {
+                    title: "MODA PARA NIÑOS",
+                    description: "Ropa cómoda y divertida para los más pequeños de la casa"
+                },
+                ofertas: {
+                    title: "OFERTAS ESPECIALES",
+                    description: "Aprovecha nuestras promociones exclusivas con descuentos increíbles"
+                },
+                novedades: {
+                    title: "ÚLTIMAS NOVEDADES",
+                    description: "Descubre nuestra nueva colección con las últimas tendencias de la temporada"
+                }
+            };
+            
+            bannerContent.querySelector('h1').textContent = banners[category].title;
+            bannerContent.querySelector('p').textContent = banners[category].description;
         }
         
         // Update filter state based on checkboxes
@@ -1090,6 +1533,7 @@
         
         // Apply filters to products
         function applyFilters() {
+            const products = categories[currentCategory];
             const filteredProducts = products.filter(product => {
                 // Availability filter
                 if (filterState.availability.length > 0 && !filterState.availability.includes(product.availability)) {
@@ -1122,7 +1566,7 @@
         // Sort products
         function sortProducts() {
             const sortValue = sortSelect.value;
-            let sortedProducts = [...products];
+            let sortedProducts = [...categories[currentCategory]];
             
             switch(sortValue) {
                 case 'price_asc':
@@ -1193,8 +1637,8 @@
             const color = colorOption.dataset.color;
             const colorName = colorOption.dataset.colorName;
             
-            // Find the product
-            const product = products.find(p => p.id === productId);
+            // Find the product in the current category
+            const product = categories[currentCategory].find(p => p.id === productId);
             if (!product) return;
             
             // Update the product's color and colorPart
@@ -1249,6 +1693,21 @@
                 case 'white':
                     imgElement.style.filter = 'brightness(150%)';
                     break;
+                case 'pink':
+                    imgElement.style.filter = 'hue-rotate(320deg) saturate(200%)';
+                    break;
+                case 'purple':
+                    imgElement.style.filter = 'hue-rotate(240deg)';
+                    break;
+                case 'green':
+                    imgElement.style.filter = 'hue-rotate(80deg)';
+                    break;
+                case 'yellow':
+                    imgElement.style.filter = 'hue-rotate(40deg) brightness(120%)';
+                    break;
+                case 'gray':
+                    imgElement.style.filter = 'grayscale(100%)';
+                    break;
             }
         }
         
@@ -1256,7 +1715,10 @@
         function addToCart(e) {
             const button = e.target;
             const productId = parseInt(button.dataset.id);
-            const product = products.find(p => p.id === productId);
+            
+            // Find the product in the current category
+            const product = categories[currentCategory].find(p => p.id === productId);
+            if (!product) return;
             
             // Check if product is already in cart
             const existingItem = cart.find(item => item.id === productId);
