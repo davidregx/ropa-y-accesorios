@@ -18,7 +18,7 @@
             line-height: 1.6;
         }
         
-.container {
+ .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
@@ -73,12 +73,12 @@
             background-color: #d32f2f;
         }
         
-  .header-icons {
+ .header-icons {
             display: flex;
             gap: 20px;
         }
         
-  .header-icons i {
+ .header-icons i {
             font-size: 20px;
             cursor: pointer;
             position: relative;
@@ -107,7 +107,7 @@
         }
         
         /* Filters Section */
-  .filters {
+ .filters {
             width: 250px;
             background: #fff;
             padding: 20px;
@@ -141,7 +141,7 @@
             align-items: center;
         }
         
-  .close-filters {
+ .close-filters {
             display: none;
             font-size: 20px;
             cursor: pointer;
@@ -151,7 +151,7 @@
             margin-bottom: 25px;
         }
         
- .filter-section h3 {
+  .filter-section h3 {
             font-size: 14px;
             font-weight: 600;
             margin-bottom: 12px;
@@ -159,7 +159,7 @@
             text-transform: uppercase;
         }
         
- .filter-options {
+  .filter-options {
             display: flex;
             flex-direction: column;
             gap: 10px;
@@ -177,25 +177,25 @@
             cursor: pointer;
         }
         
- .filter-option label {
+  .filter-option label {
             font-size: 14px;
             cursor: pointer;
             flex: 1;
         }
         
- .price-range {
+  .price-range {
             display: flex;
             justify-content: space-between;
             margin-top: 10px;
         }
         
-  .price-range span {
+ .price-range span {
             font-size: 13px;
             color: #777;
         }
         
         /* Products Section */
-   .products-section {
+  .products-section {
             flex: 1;
         }
         
@@ -217,13 +217,13 @@
             color: #555;
         }
         
- .sort-options {
+  .sort-options {
             display: flex;
             align-items: center;
             gap: 10px;
         }
         
-  .sort-options select {
+ .sort-options select {
             padding: 8px 12px;
             border: 1px solid #ddd;
             border-radius: 4px;
@@ -231,7 +231,7 @@
             cursor: pointer;
         }
         
-  .product-grid {
+ .product-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
             gap: 25px;
@@ -246,7 +246,7 @@
             position: relative;
         }
         
-.product-card:hover {
+ .product-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
@@ -271,7 +271,7 @@
             transform: scale(1.05);
         }
         
-.promo-badge {
+ .promo-badge {
             position: absolute;
             top: 10px;
             left: 10px;
@@ -283,11 +283,11 @@
             font-weight: 600;
         }
         
- .product-info {
+  .product-info {
             padding: 15px;
         }
         
- .product-name {
+  .product-name {
             font-size: 14px;
             color: #555;
             margin-bottom: 8px;
@@ -301,25 +301,25 @@
             gap: 10px;
         }
         
- .current-price {
+  .current-price {
             font-size: 18px;
             font-weight: 700;
             color: #d32f2f;
         }
         
- .original-price {
+  .original-price {
             font-size: 14px;
             color: #999;
             text-decoration: line-through;
         }
         
- .product-colors {
+  .product-colors {
             display: flex;
             gap: 6px;
             margin-top: 12px;
         }
         
- .color-option {
+  .color-option {
             width: 20px;
             height: 20px;
             border-radius: 50%;
@@ -328,7 +328,7 @@
             position: relative;
         }
         
- .color-option.active::after {
+  .color-option.active::after {
             content: '';
             position: absolute;
             top: -3px;
@@ -347,7 +347,7 @@
         .color-option.red { background-color: #b22222; }
         .color-option.white { background-color: #f0f0f0; border: 1px solid #ddd; }
         
- .add-to-cart {
+  .add-to-cart {
             width: 100%;
             padding: 10px;
             background-color: #333;
@@ -360,7 +360,7 @@
             transition: background-color 0.3s;
         }
         
-  .add-to-cart:hover {
+ .add-to-cart:hover {
             background-color: #d32f2f;
         }
         
@@ -369,7 +369,7 @@
         }
         
         /* Footer Styles */
-  footer {
+ footer {
             background-color: #333;
             color: #fff;
             padding: 40px 0 20px;
@@ -385,14 +385,14 @@
             padding: 0 20px;
         }
         
- .footer-column h3 {
+  .footer-column h3 {
             font-size: 18px;
             margin-bottom: 20px;
             position: relative;
             padding-bottom: 10px;
         }
         
- .footer-column h3::after {
+  .footer-column h3::after {
             content: '';
             position: absolute;
             bottom: 0;
@@ -402,18 +402,18 @@
             background-color: #d32f2f;
         }
         
- .footer-column ul {
+  .footer-column ul {
             list-style: none;
         }
         
- .footer-column ul li {
+  .footer-column ul li {
             margin-bottom: 10px;
             display: flex;
             align-items: center;
             gap: 10px;
         }
         
- .footer-column ul li a {
+  .footer-column ul li a {
             color: #bbb;
             text-decoration: none;
             transition: color 0.3s;
@@ -423,7 +423,7 @@
             color: #fff;
         }
         
- .social-icons {
+  .social-icons {
             display: flex;
             gap: 15px;
             margin-top: 15px;
@@ -445,7 +445,7 @@
             background-color: #d32f2f;
         }
         
-.copyright {
+  .copyright {
             text-align: center;
             padding-top: 30px;
             margin-top: 30px;
@@ -455,7 +455,7 @@
         }
         
         /* Cart Sidebar */
- .cart-sidebar {
+  .cart-sidebar {
             position: fixed;
             top: 0;
             right: -400px;
@@ -482,7 +482,7 @@
             margin-bottom: 20px;
         }
         
-  .close-cart {
+ .close-cart {
             font-size: 24px;
             cursor: pointer;
             color: #333;
@@ -520,18 +520,18 @@
             flex: 1;
         }
         
- .cart-item-name {
+  .cart-item-name {
             font-size: 14px;
             margin-bottom: 5px;
         }
         
- .cart-item-price {
+  .cart-item-price {
             font-weight: 600;
             color: #d32f2f;
             margin-bottom: 8px;
         }
         
- .cart-item-actions {
+  .cart-item-actions {
             display: flex;
             align-items: center;
             gap: 10px;
@@ -554,7 +554,7 @@
             font-size: 16px;
         }
         
- .quantity-input {
+  .quantity-input {
             width: 40px;
             height: 30px;
             border: none;
@@ -562,7 +562,7 @@
             font-size: 14px;
         }
         
- .remove-item {
+  .remove-item {
             color: #d32f2f;
             background: none;
             border: none;
@@ -580,7 +580,7 @@
             font-weight: 600;
         }
         
- .checkout-btn {
+  .checkout-btn {
             width: 100%;
             padding: 12px;
             background: #d32f2f;
@@ -598,12 +598,12 @@
         }
         
         /* Responsive Styles */
- @media (max-width: 992px) {
+  @media (max-width: 992px) {
             .main-content {
                 flex-direction: column;
             }
             
- .filters {
+  .filters {
                 width: 100%;
                 position: fixed;
                 top: 0;
@@ -626,7 +626,7 @@
                 display: block;
             }
             
- .footer-content {
+  .footer-content {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
@@ -640,12 +640,12 @@
                 display: none;
             }
             
- .header-top {
+  .header-top {
                 flex-wrap: wrap;
                 gap: 15px;
             }
             
- .cart-sidebar {
+  .cart-sidebar {
                 width: 100%;
                 right: -100%;
             }
@@ -660,7 +660,7 @@
                 grid-template-columns: 1fr;
             }
             
- .products-header {
+.products-header {
                 flex-direction: column;
                 align-items: flex-start;
             }
@@ -689,7 +689,7 @@
         </div>
     </header>
 
- <div class="container">
+<div class="container">
         <button class="filter-toggle" id="filterToggle">
             <i class="fas fa-filter"></i> Filtrar Productos
         </button>
@@ -735,7 +735,7 @@
                     </div>
                 </div>
                 
- <div class="filter-section">
+  <div class="filter-section">
                     <h3>COLOR</h3>
                     <div class="filter-options">
                         <div class="filter-option">
@@ -783,11 +783,11 @@
                     </div>
                 </div>
                 
-<button class="add-to-cart" id="applyFilters">Aplicar Filtros</button>
+ <button class="add-to-cart" id="applyFilters">Aplicar Filtros</button>
             </aside>
             
             <!-- Products Section -->
- <section class="products-section">
+<section class="products-section">
                 <div class="products-header">
                     <div class="products-count">76 artículos</div>
                     <div class="sort-options">
@@ -802,7 +802,7 @@
                     </div>
                 </div>
                 
-<div class="product-grid" id="productGrid">
+ <div class="product-grid" id="productGrid">
                     <!-- Products will be dynamically inserted here -->
                 </div>
             </section>
@@ -810,7 +810,7 @@
     </div>
     
     <!-- Cart Sidebar -->
- <div class="cart-sidebar" id="cartSidebar">
+<div class="cart-sidebar" id="cartSidebar">
         <div class="cart-header">
             <h2>Tu Carrito</h2>
             <span class="close-cart" id="closeCart">&times;</span>
