@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo Completo - MBO</title>
+    <title>Catálogo MBO con Filtros Funcionales</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -12,7 +12,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
-  body {
+ body {
             background-color: #f8f9fa;
             color: #333;
             line-height: 1.6;
@@ -34,14 +34,14 @@
             z-index: 100;
         }
         
-.header-top {
+ .header-top {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 0 20px;
         }
         
-  .logo {
+ .logo {
             font-size: 28px;
             font-weight: 700;
             color: #d32f2f;
@@ -60,16 +60,16 @@
             padding: 8px 0;
         }
         
- .nav-links a:hover {
+  .nav-links a:hover {
             color: #d32f2f;
         }
         
- .nav-links a.active {
+  .nav-links a.active {
             color: #d32f2f;
             font-weight: 600;
         }
         
-  .nav-links a.active::after {
+ .nav-links a.active::after {
             content: '';
             position: absolute;
             bottom: 0;
@@ -79,7 +79,7 @@
             background-color: #d32f2f;
         }
         
-  .header-icons {
+ .header-icons {
             display: flex;
             gap: 20px;
         }
@@ -134,14 +134,14 @@
         }
         
         /* Main Content Styles */
- .main-content {
+  .main-content {
             display: flex;
             gap: 30px;
             margin-top: 30px;
         }
         
         /* Filters Section */
- .filters {
+  .filters {
             width: 250px;
             background: #fff;
             padding: 20px;
@@ -151,7 +151,7 @@
             transition: transform 0.3s ease;
         }
         
- .filter-toggle {
+  .filter-toggle {
             display: none;
             padding: 10px 15px;
             background: #d32f2f;
@@ -164,7 +164,7 @@
             width: 100%;
         }
         
-  .filter-title {
+ .filter-title {
             font-size: 18px;
             font-weight: 600;
             margin-bottom: 20px;
@@ -193,7 +193,7 @@
             text-transform: uppercase;
         }
         
- .filter-options {
+  .filter-options {
             display: flex;
             flex-direction: column;
             gap: 10px;
@@ -205,7 +205,7 @@
             gap: 8px;
         }
         
- .filter-option input[type="checkbox"] {
+  .filter-option input[type="checkbox"] {
             width: 16px;
             height: 16px;
             cursor: pointer;
@@ -217,19 +217,19 @@
             flex: 1;
         }
         
-.price-range {
+ .price-range {
             display: flex;
             justify-content: space-between;
             margin-top: 10px;
         }
         
-.price-range span {
+ .price-range span {
             font-size: 13px;
             color: #777;
         }
         
         /* Products Section */
- .products-section {
+  .products-section {
             flex: 1;
         }
         
@@ -285,7 +285,7 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
- .product-image {
+.product-image {
             height: 280px;
             background-color: #f5f5f5;
             display: flex;
@@ -347,7 +347,7 @@
             text-decoration: line-through;
         }
         
-  .product-colors {
+ .product-colors {
             display: flex;
             gap: 6px;
             margin-top: 12px;
@@ -426,7 +426,7 @@
             right: 0;
         }
         
-  .cart-header {
+ .cart-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -435,7 +435,7 @@
             margin-bottom: 20px;
         }
         
- .close-cart {
+.close-cart {
             font-size: 24px;
             cursor: pointer;
             color: #333;
@@ -469,7 +469,7 @@
             max-height: 90%;
         }
         
- .cart-item-info {
+  .cart-item-info {
             flex: 1;
         }
         
@@ -478,7 +478,7 @@
             margin-bottom: 5px;
         }
         
- .cart-item-price {
+  .cart-item-price {
             font-weight: 600;
             color: #d32f2f;
             margin-bottom: 8px;
@@ -490,7 +490,7 @@
             gap: 10px;
         }
         
- .cart-item-quantity {
+  .cart-item-quantity {
             display: flex;
             align-items: center;
             border: 1px solid #ddd;
@@ -551,7 +551,7 @@
         }
         
         /* Responsive Styles */
- @media (max-width: 992px) {
+  @media (max-width: 992px) {
             .main-content {
                 flex-direction: column;
             }
@@ -580,31 +580,31 @@
             }
         }
         
-  @media (max-width: 768px) {
+ @media (max-width: 768px) {
             .product-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
             
-  .nav-links {
+ .nav-links {
                 display: none;
             }
             
- .header-top {
+  .header-top {
                 flex-wrap: wrap;
                 gap: 15px;
             }
             
-  .cart-sidebar {
+ .cart-sidebar {
                 width: 100%;
                 right: -100%;
             }
             
- .banner-content h1 {
+  .banner-content h1 {
                 font-size: 32px;
             }
         }
         
- @media (max-width: 576px) {
+  @media (max-width: 576px) {
             .product-grid {
                 grid-template-columns: 1fr;
             }
@@ -663,87 +663,40 @@
                     <span class="close-filters" id="closeFilters">&times;</span>
                 </h2>
                 
-  <div class="filter-section">
+ <div class="filter-section">
                     <h3>DISPONIBILIDAD</h3>
-                    <div class="filter-options">
-                        <div class="filter-option">
-                            <input type="checkbox" id="stock" class="filter-check" data-filter="availability" value="stock" checked>
-                            <label for="stock">En stock (76)</label>
-                        </div>
-                        <div class="filter-option">
-                            <input type="checkbox" id="preorder" class="filter-check" data-filter="availability" value="preorder">
-                            <label for="preorder">Preventa (12)</label>
-                        </div>
+                    <div class="filter-options" id="availability-options">
+                        <!-- Dynamically populated -->
                     </div>
                 </div>
                 
  <div class="filter-section">
                     <h3>TIPO DE PRODUCTO</h3>
-                    <div class="filter-options">
-                        <div class="filter-option">
-                            <input type="checkbox" id="polo" class="filter-check" data-filter="type" value="polo" checked>
-                            <label for="polo">Polos (76)</label>
-                        </div>
-                        <div class="filter-option">
-                            <input type="checkbox" id="camisa" class="filter-check" data-filter="type" value="camisa">
-                            <label for="camisa">Camisas (32)</label>
-                        </div>
-                        <div class="filter-option">
-                            <input type="checkbox" id="pantalon" class="filter-check" data-filter="type" value="pantalon">
-                            <label for="pantalon">Pantalones (24)</label>
-                        </div>
+                    <div class="filter-options" id="type-options">
+                        <!-- Dynamically populated -->
                     </div>
                 </div>
                 
  <div class="filter-section">
                     <h3>COLOR</h3>
-                    <div class="filter-options">
-                        <div class="filter-option">
-                            <input type="checkbox" id="verde" class="filter-check" data-filter="color" value="olive" checked>
-                            <label for="verde">Verde Olivo (18)</label>
-                        </div>
-                        <div class="filter-option">
-                            <input type="checkbox" id="marron" class="filter-check" data-filter="color" value="brown" checked>
-                            <label for="marron">Marrón (15)</label>
-                        </div>
-                        <div class="filter-option">
-                            <input type="checkbox" id="mostaza" class="filter-check" data-filter="color" value="mustard" checked>
-                            <label for="mostaza">Mostaza (12)</label>
-                        </div>
-                        <div class="filter-option">
-                            <input type="checkbox" id="azul" class="filter-check" data-filter="color" value="blue">
-                            <label for="azul">Azul Marino (21)</label>
-                        </div>
-                        <div class="filter-option">
-                            <input type="checkbox" id="negro" class="filter-check" data-filter="color" value="black">
-                            <label for="negro">Negro (10)</label>
-                        </div>
+                    <div class="filter-options" id="color-options">
+                        <!-- Dynamically populated -->
                     </div>
                 </div>
                 
  <div class="filter-section">
                     <h3>PRECIO</h3>
-                    <div class="filter-options">
-                        <div class="filter-option">
-                            <input type="checkbox" id="price1" class="filter-check" data-filter="price" value="price1">
-                            <label for="price1">S/ 20 - S/ 50 (12)</label>
-                        </div>
-                        <div class="filter-option">
-                            <input type="checkbox" id="price2" class="filter-check" data-filter="price" value="price2" checked>
-                            <label for="price2">S/ 50 - S/ 80 (42)</label>
-                        </div>
-                        <div class="filter-option">
-                            <input type="checkbox" id="price3" class="filter-check" data-filter="price" value="price3">
-                            <label for="price3">S/ 80 - S/ 120 (22)</label>
-                        </div>
+                    <div class="filter-options" id="price-options">
+                        <!-- Dynamically populated -->
                     </div>
                     <div class="price-range">
-                        <span>S/ 20</span>
-                        <span>S/ 120</span>
+                        <span id="min-price">S/ 0</span>
+                        <span id="max-price">S/ 0</span>
                     </div>
                 </div>
                 
  <button class="add-to-cart" id="applyFilters">Aplicar Filtros</button>
+                <button class="add-to-cart" id="resetFilters" style="background-color: #555; margin-top: 10px;">Reiniciar Filtros</button>
             </aside>
             
             <!-- Products Section -->
@@ -1092,71 +1045,11 @@
                     color: "green",
                     priceRange: "price1",
                     image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M60,30 L140,30 L160,70 L160,170 L40,170 L40,70 Z' fill='%232e8b57'/%3E%3C/svg%3E"
-                },
-                {
-                    id: 21,
-                    baseName: "CAMISETA NIÑO SUPERHÉROE",
-                    colorPart: "AZUL",
-                    code: "N516",
-                    price: 39.00,
-                    promo: "3 x 3,50",
-                    colors: ["blue", "red"],
-                    colorNames: ["AZUL", "ROJO"],
-                    type: "camiseta",
-                    availability: "stock",
-                    color: "blue",
-                    priceRange: "price1",
-                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M60,50 L140,50 L160,80 L160,170 L40,170 L40,80 Z' fill='%234b7bec'/%3E%3Cpath d='M100,80 L120,120 L100,140 L80,120 Z' fill='yellow'/%3E%3C/svg%3E"
-                },
-                {
-                    id: 22,
-                    baseName: "FALDA NIÑA",
-                    colorPart: "AMARILLO",
-                    code: "N624",
-                    price: 49.00,
-                    promo: "",
-                    colors: ["yellow", "pink"],
-                    colorNames: ["AMARILLO", "ROSA"],
-                    type: "falda",
-                    availability: "stock",
-                    color: "yellow",
-                    priceRange: "price1",
-                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M80,50 L120,50 L140,120 L60,120 Z' fill='%23ffd700'/%3E%3C/svg%3E"
-                },
-                {
-                    id: 23,
-                    baseName: "CHAQUETA NIÑO",
-                    colorPart: "ROJO",
-                    code: "N732",
-                    price: 89.00,
-                    promo: "2 x 80,00",
-                    colors: ["red", "black"],
-                    colorNames: ["ROJO", "NEGRO"],
-                    type: "chaqueta",
-                    availability: "stock",
-                    color: "red",
-                    priceRange: "price2",
-                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M60,30 L140,30 L160,70 L160,170 L40,170 L40,70 Z' fill='%23b22222'/%3E%3C/svg%3E"
-                },
-                {
-                    id: 24,
-                    baseName: "PANTALÓN NIÑA",
-                    colorPart: "ROSA",
-                    code: "N840",
-                    price: 59.00,
-                    promo: "3 x 5,50",
-                    colors: ["pink", "purple"],
-                    colorNames: ["ROSA", "LILA"],
-                    type: "pantalon",
-                    availability: "stock",
-                    color: "pink",
-                    priceRange: "price1",
-                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M80,50 L120,50 L140,150 L60,150 Z' fill='%23ff69b4'/%3E%3C/svg%3E"
                 }
             ],
             ofertas: [
                 {
-                    id: 25,
+                    id: 21,
                     baseName: "POLO OFERTA ESPECIAL",
                     colorPart: "NEGRO",
                     code: "OF001",
@@ -1171,7 +1064,7 @@
                     image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M60,50 L140,50 L160,80 L160,170 L40,170 L40,80 Z' fill='%23333'/%3E%3C/svg%3E"
                 },
                 {
-                    id: 26,
+                    id: 22,
                     baseName: "JEANS OFERTA",
                     colorPart: "AZUL",
                     code: "OF102",
@@ -1186,7 +1079,7 @@
                     image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M80,50 L120,50 L140,150 L60,150 Z' fill='%231e3c72'/%3E%3C/svg%3E"
                 },
                 {
-                    id: 27,
+                    id: 23,
                     baseName: "CAMISA OFERTA",
                     colorPart: "BLANCO",
                     code: "OF203",
@@ -1201,7 +1094,7 @@
                     image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M60,50 L140,50 L160,80 L160,170 L40,170 L40,80 Z' fill='white'/%3E%3C/svg%3E"
                 },
                 {
-                    id: 28,
+                    id: 24,
                     baseName: "CHAQUETA OFERTA",
                     colorPart: "GRIS",
                     code: "OF304",
@@ -1214,71 +1107,11 @@
                     color: "gray",
                     priceRange: "price2",
                     image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M60,30 L140,30 L160,70 L160,170 L40,170 L40,70 Z' fill='%23808080'/%3E%3C/svg%3E"
-                },
-                {
-                    id: 29,
-                    baseName: "VESTIDO OFERTA",
-                    colorPart: "ROJO",
-                    code: "OF405",
-                    price: 89.00,
-                    promo: "",
-                    colors: ["red", "black"],
-                    colorNames: ["ROJO", "NEGRO"],
-                    type: "vestido",
-                    availability: "stock",
-                    color: "red",
-                    priceRange: "price2",
-                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M100,30 Q150,70 100,150 Q50,70 100,30 Z' fill='%23b22222'/%3E%3C/svg%3E"
-                },
-                {
-                    id: 30,
-                    baseName: "ZAPATOS OFERTA",
-                    colorPart: "NEGRO",
-                    code: "OF506",
-                    price: 129.00,
-                    promo: "2 x 110,00",
-                    colors: ["black", "brown"],
-                    colorNames: ["NEGRO", "MARRÓN"],
-                    type: "zapatos",
-                    availability: "stock",
-                    color: "black",
-                    priceRange: "price3",
-                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M70,150 Q90,100 130,100 Q150,150 70,150 Z' fill='%23333'/%3E%3C/svg%3E"
-                },
-                {
-                    id: 31,
-                    baseName: "BOLSO OFERTA",
-                    colorPart: "MARRÓN",
-                    code: "OF607",
-                    price: 79.00,
-                    promo: "3 x 7,00",
-                    colors: ["brown", "black"],
-                    colorNames: ["MARRÓN", "NEGRO"],
-                    type: "bolso",
-                    availability: "stock",
-                    color: "brown",
-                    priceRange: "price2",
-                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Crect x='80' y='80' width='40' height='60' rx='5' fill='%238B4513'/%3E%3Crect x='70' y='70' width='60' height='20' rx='5' fill='%238B4513'/%3E%3C/svg%3E"
-                },
-                {
-                    id: 32,
-                    baseName: "GORRA OFERTA",
-                    colorPart: "AZUL",
-                    code: "OF708",
-                    price: 29.00,
-                    promo: "3 x 2,50",
-                    colors: ["blue", "red"],
-                    colorNames: ["AZUL", "ROJO"],
-                    type: "gorra",
-                    availability: "stock",
-                    color: "blue",
-                    priceRange: "price1",
-                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M70,100 Q100,50 130,100 L130,120 L70,120 Z' fill='%231e3c72'/%3E%3C/svg%3E"
                 }
             ],
             novedades: [
                 {
-                    id: 33,
+                    id: 25,
                     baseName: "POLO ULTRA LIGERO",
                     colorPart: "VERDE MENTA",
                     code: "NV001",
@@ -1293,7 +1126,7 @@
                     image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M60,50 L140,50 L160,80 L160,170 L40,170 L40,80 Z' fill='%2338c172'/%3E%3C/svg%3E"
                 },
                 {
-                    id: 34,
+                    id: 26,
                     baseName: "JEANS ROTO",
                     colorPart: "AZUL CLARO",
                     code: "NV102",
@@ -1308,7 +1141,7 @@
                     image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M80,50 L120,50 L140,150 L60,150 Z' fill='%234b7bec'/%3E%3Crect x='100' y='100' width='20' height='30' fill='white'/%3E%3C/svg%3E"
                 },
                 {
-                    id: 35,
+                    id: 27,
                     baseName: "CAMISA ESTAMPADA FLORES",
                     colorPart: "BLANCO Y ROSA",
                     code: "NV203",
@@ -1323,7 +1156,7 @@
                     image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M60,50 L140,50 L160,80 L160,170 L40,170 L40,80 Z' fill='white'/%3E%3Ccircle cx='100' cy='100' r='10' fill='%23ff69b4'/%3E%3Ccircle cx='130' cy='80' r='8' fill='%23ff69b4'/%3E%3Ccircle cx='80' cy='130' r='8' fill='%23ff69b4'/%3E%3C/svg%3E"
                 },
                 {
-                    id: 36,
+                    id: 28,
                     baseName: "ABRIGO ULTRA LIGERO",
                     colorPart: "BEIGE",
                     code: "NV304",
@@ -1336,66 +1169,6 @@
                     color: "brown",
                     priceRange: "price3",
                     image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M60,30 L140,30 L160,70 L160,170 L40,170 L40,70 Z' fill='%238B4513'/%3E%3C/svg%3E"
-                },
-                {
-                    id: 37,
-                    baseName: "VESTIDO LARGO",
-                    colorPart: "NEGRO",
-                    code: "NV405",
-                    price: 149.00,
-                    promo: "2 x 130,00",
-                    colors: ["black", "red"],
-                    colorNames: ["NEGRO", "ROJO"],
-                    type: "vestido",
-                    availability: "stock",
-                    color: "black",
-                    priceRange: "price3",
-                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M100,30 Q150,70 100,170 Q50,70 100,30 Z' fill='%23333'/%3E%3C/svg%3E"
-                },
-                {
-                    id: 38,
-                    baseName: "ZAPATILLAS DEPORTIVAS",
-                    colorPart: "BLANCO Y NEGRO",
-                    code: "NV506",
-                    price: 169.00,
-                    promo: "",
-                    colors: ["black", "white"],
-                    colorNames: ["BLANCO Y NEGRO", "NEGRO Y ROJO"],
-                    type: "zapatillas",
-                    availability: "stock",
-                    color: "black",
-                    priceRange: "price3",
-                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Cpath d='M70,150 Q90,100 130,100 Q150,150 70,150 Z' fill='white'/%3E%3Cpath d='M80,140 Q100,100 120,100 Q130,130 80,140 Z' fill='%23333'/%3E%3C/svg%3E"
-                },
-                {
-                    id: 39,
-                    baseName: "BUFANDA DE LANA",
-                    colorPart: "GRIS Y BLANCO",
-                    code: "NV607",
-                    price: 49.00,
-                    promo: "3 x 4,50",
-                    colors: ["gray", "red"],
-                    colorNames: ["GRIS Y BLANCO", "ROJO Y NEGRO"],
-                    type: "bufanda",
-                    availability: "stock",
-                    color: "gray",
-                    priceRange: "price1",
-                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Crect x='80' y='90' width='40' height='20' fill='%23808080'/%3E%3Crect x='80' y='110' width='40' height='20' fill='white'/%3E%3Crect x='80' y='130' width='40' height='20' fill='%23808080'/%3E%3C/svg%3E"
-                },
-                {
-                    id: 40,
-                    baseName: "GORRO DE INVIERNO",
-                    colorPart: "AZUL MARINO",
-                    code: "NV708",
-                    price: 39.00,
-                    promo: "3 x 3,50",
-                    colors: ["blue", "black"],
-                    colorNames: ["AZUL MARINO", "NEGRO"],
-                    type: "gorro",
-                    availability: "stock",
-                    color: "blue",
-                    priceRange: "price1",
-                    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f5f5f5'/%3E%3Ccircle cx='100' cy='80' r='40' fill='%231e3c72'/%3E%3Crect x='60' y='80' width='80' height='50' fill='%231e3c72'/%3E%3C/svg%3E"
                 }
             ]
         };
@@ -1409,6 +1182,7 @@
         const filters = document.getElementById('filters');
         const closeFilters = document.getElementById('closeFilters');
         const applyFiltersBtn = document.getElementById('applyFilters');
+        const resetFiltersBtn = document.getElementById('resetFilters');
         const sortSelect = document.getElementById('sort');
         const cartIcon = document.getElementById('cart-icon');
         const cartSidebar = document.getElementById('cartSidebar');
@@ -1416,16 +1190,32 @@
         const cartItems = document.getElementById('cartItems');
         const cartTotal = document.getElementById('cartTotal');
         const cartCount = document.querySelector('.cart-count');
-        const filterChecks = document.querySelectorAll('.filter-check');
         const categoryLinks = document.querySelectorAll('.category-link');
         const bannerContent = document.querySelector('.banner-content');
+        
+        // Filter containers
+        const availabilityOptions = document.getElementById('availability-options');
+        const typeOptions = document.getElementById('type-options');
+        const colorOptions = document.getElementById('color-options');
+        const priceOptions = document.getElementById('price-options');
+        const minPriceSpan = document.getElementById('min-price');
+        const maxPriceSpan = document.getElementById('max-price');
         
         // Current category
         let currentCategory = 'hombre';
         
+        // Filter state
+        let filterState = {
+            availability: [],
+            type: [],
+            color: [],
+            price: []
+        };
+        
         // Initialize the page
         function init() {
             renderProducts(categories[currentCategory]);
+            updateFilters();
             setupEventListeners();
             updateCartCount();
         }
@@ -1444,6 +1234,9 @@
             // Apply filters
             applyFiltersBtn.addEventListener('click', applyFilters);
             
+            // Reset filters
+            resetFiltersBtn.addEventListener('click', resetFilters);
+            
             // Sort products
             sortSelect.addEventListener('change', sortProducts);
             
@@ -1455,11 +1248,6 @@
             
             closeCart.addEventListener('click', () => {
                 cartSidebar.classList.remove('active');
-            });
-            
-            // Filter checkboxes
-            filterChecks.forEach(check => {
-                check.addEventListener('change', updateFilterState);
             });
             
             // Category links
@@ -1477,8 +1265,14 @@
                     // Update banner
                     updateBanner(currentCategory);
                     
+                    // Reset filters
+                    resetFilters();
+                    
                     // Render products
                     renderProducts(categories[currentCategory]);
+                    
+                    // Update filters
+                    updateFilters();
                 });
             });
         }
@@ -1512,23 +1306,201 @@
             bannerContent.querySelector('p').textContent = banners[category].description;
         }
         
-        // Update filter state based on checkboxes
-        function updateFilterState() {
-            filterChecks.forEach(check => {
-                const filterType = check.dataset.filter;
-                const value = check.value;
+        // Update filters based on current category
+        function updateFilters() {
+            const products = categories[currentCategory];
+            
+            // Reset filter state
+            filterState = {
+                availability: [],
+                type: [],
+                color: [],
+                price: []
+            };
+            
+            // Calculate min and max prices
+            let minPrice = Infinity;
+            let maxPrice = 0;
+            
+            products.forEach(product => {
+                if (product.price < minPrice) minPrice = product.price;
+                if (product.price > maxPrice) maxPrice = product.price;
+            });
+            
+            minPriceSpan.textContent = `S/ ${Math.floor(minPrice)}`;
+            maxPriceSpan.textContent = `S/ ${Math.ceil(maxPrice)}`;
+            
+            // Calculate filter counts
+            const availabilityCounts = {};
+            const typeCounts = {};
+            const colorCounts = {};
+            const priceCounts = {
+                low: 0,
+                medium: 0,
+                high: 0
+            };
+            
+            // Price ranges
+            const lowPrice = minPrice;
+            const mediumPrice = minPrice + (maxPrice - minPrice) / 3;
+            const highPrice = minPrice + (maxPrice - minPrice) * 2 / 3;
+            
+            products.forEach(product => {
+                // Availability counts
+                availabilityCounts[product.availability] = (availabilityCounts[product.availability] || 0) + 1;
                 
-                if (check.checked) {
-                    if (!filterState[filterType].includes(value)) {
-                        filterState[filterType].push(value);
-                    }
+                // Type counts
+                typeCounts[product.type] = (typeCounts[product.type] || 0) + 1;
+                
+                // Color counts
+                product.colors.forEach(color => {
+                    colorCounts[color] = (colorCounts[color] || 0) + 1;
+                });
+                
+                // Price counts
+                if (product.price <= mediumPrice) {
+                    priceCounts.low++;
+                } else if (product.price <= highPrice) {
+                    priceCounts.medium++;
                 } else {
-                    const index = filterState[filterType].indexOf(value);
-                    if (index > -1) {
-                        filterState[filterType].splice(index, 1);
-                    }
+                    priceCounts.high++;
                 }
             });
+            
+            // Render availability options
+            availabilityOptions.innerHTML = '';
+            for (const availability in availabilityCounts) {
+                const option = document.createElement('div');
+                option.className = 'filter-option';
+                option.innerHTML = `
+                    <input type="checkbox" id="${availability}" class="filter-check" data-filter="availability" value="${availability}">
+                    <label for="${availability}">${availability === 'stock' ? 'En stock' : 'Preventa'} (${availabilityCounts[availability]})</label>
+                `;
+                availabilityOptions.appendChild(option);
+            }
+            
+            // Render type options
+            typeOptions.innerHTML = '';
+            for (const type in typeCounts) {
+                const option = document.createElement('div');
+                option.className = 'filter-option';
+                option.innerHTML = `
+                    <input type="checkbox" id="${type}" class="filter-check" data-filter="type" value="${type}">
+                    <label for="${type}">${getTypeName(type)} (${typeCounts[type]})</label>
+                `;
+                typeOptions.appendChild(option);
+            }
+            
+            // Render color options
+            colorOptions.innerHTML = '';
+            for (const color in colorCounts) {
+                const option = document.createElement('div');
+                option.className = 'filter-option';
+                option.innerHTML = `
+                    <input type="checkbox" id="${color}" class="filter-check" data-filter="color" value="${color}">
+                    <label for="${color}">${getColorName(color)} (${colorCounts[color]})</label>
+                `;
+                colorOptions.appendChild(option);
+            }
+            
+            // Render price options
+            priceOptions.innerHTML = '';
+            const priceRanges = [
+                { id: 'low', name: `S/ ${Math.floor(minPrice)} - S/ ${Math.ceil(mediumPrice)}`, count: priceCounts.low },
+                { id: 'medium', name: `S/ ${Math.ceil(mediumPrice)} - S/ ${Math.ceil(highPrice)}`, count: priceCounts.medium },
+                { id: 'high', name: `S/ ${Math.ceil(highPrice)} - S/ ${Math.ceil(maxPrice)}`, count: priceCounts.high }
+            ];
+            
+            priceRanges.forEach(range => {
+                const option = document.createElement('div');
+                option.className = 'filter-option';
+                option.innerHTML = `
+                    <input type="checkbox" id="${range.id}" class="filter-check" data-filter="price" value="${range.id}">
+                    <label for="${range.id}">${range.name} (${range.count})</label>
+                `;
+                priceOptions.appendChild(option);
+            });
+            
+            // Add event listeners to filter checkboxes
+            document.querySelectorAll('.filter-check').forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    const filterType = this.dataset.filter;
+                    const value = this.value;
+                    
+                    if (this.checked) {
+                        if (!filterState[filterType].includes(value)) {
+                            filterState[filterType].push(value);
+                        }
+                    } else {
+                        const index = filterState[filterType].indexOf(value);
+                        if (index > -1) {
+                            filterState[filterType].splice(index, 1);
+                        }
+                    }
+                });
+            });
+        }
+        
+        // Get type name
+        function getTypeName(type) {
+            const typeNames = {
+                'polo': 'Polos',
+                'camisa': 'Camisas',
+                'pantalon': 'Pantalones',
+                'short': 'Shorts',
+                'sueter': 'Súeteres',
+                'camiseta': 'Camisetas',
+                'vestido': 'Vestidos',
+                'blusa': 'Blusas',
+                'falda': 'Faldas',
+                'top': 'Tops',
+                'cardigan': 'Cardigans',
+                'chaqueta': 'Chaquetas',
+                'abrigo': 'Abrigos',
+                'zapatos': 'Zapatos',
+                'bolso': 'Bolsos',
+                'gorra': 'Gorras'
+            };
+            
+            return typeNames[type] || type;
+        }
+        
+        // Get color name
+        function getColorName(color) {
+            const colorNames = {
+                'olive': 'Verde Olivo',
+                'brown': 'Marrón',
+                'mustard': 'Mostaza',
+                'blue': 'Azul Marino',
+                'black': 'Negro',
+                'red': 'Rojo',
+                'white': 'Blanco',
+                'pink': 'Rosa',
+                'purple': 'Lila',
+                'green': 'Verde',
+                'yellow': 'Amarillo',
+                'gray': 'Gris'
+            };
+            
+            return colorNames[color] || color;
+        }
+        
+        // Reset filters
+        function resetFilters() {
+            filterState = {
+                availability: [],
+                type: [],
+                color: [],
+                price: []
+            };
+            
+            // Uncheck all filter checkboxes
+            document.querySelectorAll('.filter-check').forEach(checkbox => {
+                checkbox.checked = false;
+            });
+            
+            // Render all products
+            renderProducts(categories[currentCategory]);
         }
         
         // Apply filters to products
@@ -1546,13 +1518,45 @@
                 }
                 
                 // Color filter
-                if (filterState.color.length > 0 && !filterState.color.includes(product.color)) {
-                    return false;
+                if (filterState.color.length > 0) {
+                    let hasColor = false;
+                    for (const color of filterState.color) {
+                        if (product.colors.includes(color)) {
+                            hasColor = true;
+                            break;
+                        }
+                    }
+                    if (!hasColor) return false;
                 }
                 
                 // Price filter
-                if (filterState.price.length > 0 && !filterState.price.includes(product.priceRange)) {
-                    return false;
+                if (filterState.price.length > 0) {
+                    // Calculate price ranges
+                    let minPrice = Infinity;
+                    let maxPrice = 0;
+                    
+                    products.forEach(p => {
+                        if (p.price < minPrice) minPrice = p.price;
+                        if (p.price > maxPrice) maxPrice = p.price;
+                    });
+                    
+                    const mediumPrice = minPrice + (maxPrice - minPrice) / 3;
+                    const highPrice = minPrice + (maxPrice - minPrice) * 2 / 3;
+                    
+                    let inRange = false;
+                    for (const range of filterState.price) {
+                        if (range === 'low' && product.price <= mediumPrice) {
+                            inRange = true;
+                            break;
+                        } else if (range === 'medium' && product.price > mediumPrice && product.price <= highPrice) {
+                            inRange = true;
+                            break;
+                        } else if (range === 'high' && product.price > highPrice) {
+                            inRange = true;
+                            break;
+                        }
+                    }
+                    if (!inRange) return false;
                 }
                 
                 return true;
@@ -1628,6 +1632,9 @@
             document.querySelectorAll('.color-option').forEach(color => {
                 color.addEventListener('click', changeProductColor);
             });
+            
+            // Update products count
+            document.querySelector('.products-count').textContent = `${productsToRender.length} artículos`;
         }
         
         // Change product color and name
