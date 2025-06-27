@@ -12,20 +12,20 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
-   body {
+ body {
             background-color: #f8f9fa;
             color: #333;
             line-height: 1.6;
         }
         
-   .container {
+.container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
         
         /* Header Styles */
-   header {
+  header {
             background-color: #fff;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             padding: 15px 0;
@@ -34,36 +34,36 @@
             z-index: 100;
         }
         
-   .header-top {
+ .header-top {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 0 20px;
         }
         
-   .logo {
+ .logo {
             font-size: 28px;
             font-weight: 700;
             color: #d32f2f;
         }
         
-   .nav-links {
+ .nav-links {
             display: flex;
             gap: 25px;
         }
         
-  .nav-links a {
+ .nav-links a {
             text-decoration: none;
             color: #333;
             font-weight: 500;
             position: relative;
         }
         
-   .nav-links a:hover {
+ .nav-links a:hover {
             color: #d32f2f;
         }
         
-   .nav-links a.active::after {
+ .nav-links a.active::after {
             content: '';
             position: absolute;
             bottom: -5px;
@@ -73,18 +73,18 @@
             background-color: #d32f2f;
         }
         
-   .header-icons {
+  .header-icons {
             display: flex;
             gap: 20px;
         }
         
-   .header-icons i {
+  .header-icons i {
             font-size: 20px;
             cursor: pointer;
             position: relative;
         }
         
-  .cart-count {
+ .cart-count {
             position: absolute;
             top: -8px;
             right: -8px;
@@ -100,14 +100,14 @@
         }
         
         /* Main Content Styles */
-   .main-content {
+ .main-content {
             display: flex;
             gap: 30px;
             margin-top: 30px;
         }
         
         /* Filters Section */
-   .filters {
+  .filters {
             width: 250px;
             background: #fff;
             padding: 20px;
@@ -117,7 +117,7 @@
             transition: transform 0.3s ease;
         }
         
-   .filter-toggle {
+ .filter-toggle {
             display: none;
             padding: 10px 15px;
             background: #d32f2f;
@@ -130,7 +130,7 @@
             width: 100%;
         }
         
-   .filter-title {
+ .filter-title {
             font-size: 18px;
             font-weight: 600;
             margin-bottom: 20px;
@@ -147,11 +147,11 @@
             cursor: pointer;
         }
         
-   .filter-section {
+  .filter-section {
             margin-bottom: 25px;
         }
         
-   .filter-section h3 {
+ .filter-section h3 {
             font-size: 14px;
             font-weight: 600;
             margin-bottom: 12px;
@@ -159,31 +159,31 @@
             text-transform: uppercase;
         }
         
-   .filter-options {
+ .filter-options {
             display: flex;
             flex-direction: column;
             gap: 10px;
         }
         
-   .filter-option {
+  .filter-option {
             display: flex;
             align-items: center;
             gap: 8px;
         }
         
-   .filter-option input[type="checkbox"] {
+  .filter-option input[type="checkbox"] {
             width: 16px;
             height: 16px;
             cursor: pointer;
         }
         
-  .filter-option label {
+ .filter-option label {
             font-size: 14px;
             cursor: pointer;
             flex: 1;
         }
         
-   .price-range {
+ .price-range {
             display: flex;
             justify-content: space-between;
             margin-top: 10px;
@@ -195,11 +195,11 @@
         }
         
         /* Products Section */
-  .products-section {
+   .products-section {
             flex: 1;
         }
         
-   .products-header {
+ .products-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -217,13 +217,13 @@
             color: #555;
         }
         
-  .sort-options {
+ .sort-options {
             display: flex;
             align-items: center;
             gap: 10px;
         }
         
-   .sort-options select {
+  .sort-options select {
             padding: 8px 12px;
             border: 1px solid #ddd;
             border-radius: 4px;
@@ -231,13 +231,13 @@
             cursor: pointer;
         }
         
-   .product-grid {
+  .product-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
             gap: 25px;
         }
         
-   .product-card {
+ .product-card {
             background: #fff;
             border-radius: 8px;
             overflow: hidden;
@@ -246,12 +246,12 @@
             position: relative;
         }
         
-   .product-card:hover {
+.product-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
-   .product-image {
+ .product-image {
             height: 280px;
             background-color: #f5f5f5;
             display: flex;
@@ -260,18 +260,18 @@
             position: relative;
         }
         
-   .product-image img {
+ .product-image img {
             max-width: 90%;
             max-height: 90%;
             object-fit: contain;
             transition: transform 0.3s ease;
         }
         
-   .product-card:hover .product-image img {
+ .product-card:hover .product-image img {
             transform: scale(1.05);
         }
         
-   .promo-badge {
+.promo-badge {
             position: absolute;
             top: 10px;
             left: 10px;
@@ -283,11 +283,11 @@
             font-weight: 600;
         }
         
-   .product-info {
+ .product-info {
             padding: 15px;
         }
         
-  .product-name {
+ .product-name {
             font-size: 14px;
             color: #555;
             margin-bottom: 8px;
@@ -295,31 +295,31 @@
             overflow: hidden;
         }
         
-   .product-price {
+ .product-price {
             display: flex;
             align-items: center;
             gap: 10px;
         }
         
-   .current-price {
+ .current-price {
             font-size: 18px;
             font-weight: 700;
             color: #d32f2f;
         }
         
-   .original-price {
+ .original-price {
             font-size: 14px;
             color: #999;
             text-decoration: line-through;
         }
         
-   .product-colors {
+ .product-colors {
             display: flex;
             gap: 6px;
             margin-top: 12px;
         }
         
-   .color-option {
+ .color-option {
             width: 20px;
             height: 20px;
             border-radius: 50%;
@@ -328,7 +328,7 @@
             position: relative;
         }
         
-   .color-option.active::after {
+ .color-option.active::after {
             content: '';
             position: absolute;
             top: -3px;
@@ -339,14 +339,15 @@
             border-radius: 50%;
         }
         
-  .color-option.olive { background-color: #556B2F; }
+ .color-option.olive { background-color: #556B2F; }
         .color-option.brown { background-color: #8B4513; }
         .color-option.mustard { background-color: #FFDB58; }
         .color-option.blue { background-color: #1e3c72; }
         .color-option.black { background-color: #333; }
         .color-option.red { background-color: #b22222; }
+        .color-option.white { background-color: #f0f0f0; border: 1px solid #ddd; }
         
-   .add-to-cart {
+ .add-to-cart {
             width: 100%;
             padding: 10px;
             background-color: #333;
@@ -359,23 +360,23 @@
             transition: background-color 0.3s;
         }
         
-   .add-to-cart:hover {
+  .add-to-cart:hover {
             background-color: #d32f2f;
         }
         
-   .add-to-cart.added {
+ .add-to-cart.added {
             background-color: #4CAF50;
         }
         
         /* Footer Styles */
-   footer {
+  footer {
             background-color: #333;
             color: #fff;
             padding: 40px 0 20px;
             margin-top: 50px;
         }
         
-  .footer-content {
+ .footer-content {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 30px;
@@ -384,14 +385,14 @@
             padding: 0 20px;
         }
         
-   .footer-column h3 {
+ .footer-column h3 {
             font-size: 18px;
             margin-bottom: 20px;
             position: relative;
             padding-bottom: 10px;
         }
         
-   .footer-column h3::after {
+ .footer-column h3::after {
             content: '';
             position: absolute;
             bottom: 0;
@@ -401,34 +402,34 @@
             background-color: #d32f2f;
         }
         
-  .footer-column ul {
+ .footer-column ul {
             list-style: none;
         }
         
-   .footer-column ul li {
+ .footer-column ul li {
             margin-bottom: 10px;
             display: flex;
             align-items: center;
             gap: 10px;
         }
         
-   .footer-column ul li a {
+ .footer-column ul li a {
             color: #bbb;
             text-decoration: none;
             transition: color 0.3s;
         }
         
-   .footer-column ul li a:hover {
+ .footer-column ul li a:hover {
             color: #fff;
         }
         
-   .social-icons {
+ .social-icons {
             display: flex;
             gap: 15px;
             margin-top: 15px;
         }
         
-   .social-icons a {
+ .social-icons a {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -440,11 +441,11 @@
             transition: background-color 0.3s;
         }
         
-   .social-icons a:hover {
+ .social-icons a:hover {
             background-color: #d32f2f;
         }
         
-   .copyright {
+.copyright {
             text-align: center;
             padding-top: 30px;
             margin-top: 30px;
@@ -454,7 +455,7 @@
         }
         
         /* Cart Sidebar */
-   .cart-sidebar {
+ .cart-sidebar {
             position: fixed;
             top: 0;
             right: -400px;
@@ -468,11 +469,11 @@
             overflow-y: auto;
         }
         
-   .cart-sidebar.active {
+ .cart-sidebar.active {
             right: 0;
         }
         
-   .cart-header {
+ .cart-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -481,26 +482,26 @@
             margin-bottom: 20px;
         }
         
-   .close-cart {
+  .close-cart {
             font-size: 24px;
             cursor: pointer;
             color: #333;
         }
         
-  .cart-items {
+ .cart-items {
             display: flex;
             flex-direction: column;
             gap: 15px;
         }
         
-  .cart-item {
+ .cart-item {
             display: flex;
             gap: 15px;
             padding-bottom: 15px;
             border-bottom: 1px solid #eee;
         }
         
-  .cart-item-img {
+ .cart-item-img {
             width: 80px;
             height: 100px;
             background: #f5f5f5;
@@ -510,33 +511,33 @@
             border-radius: 4px;
         }
         
-   .cart-item-img img {
+ .cart-item-img img {
             max-width: 90%;
             max-height: 90%;
         }
         
-   .cart-item-info {
+ .cart-item-info {
             flex: 1;
         }
         
-   .cart-item-name {
+ .cart-item-name {
             font-size: 14px;
             margin-bottom: 5px;
         }
         
-  .cart-item-price {
+ .cart-item-price {
             font-weight: 600;
             color: #d32f2f;
             margin-bottom: 8px;
         }
         
-  .cart-item-actions {
+ .cart-item-actions {
             display: flex;
             align-items: center;
             gap: 10px;
         }
         
-   .cart-item-quantity {
+ .cart-item-quantity {
             display: flex;
             align-items: center;
             border: 1px solid #ddd;
@@ -544,7 +545,7 @@
             overflow: hidden;
         }
         
-  .quantity-btn {
+ .quantity-btn {
             width: 30px;
             height: 30px;
             background: #f5f5f5;
@@ -553,7 +554,7 @@
             font-size: 16px;
         }
         
-  .quantity-input {
+ .quantity-input {
             width: 40px;
             height: 30px;
             border: none;
@@ -561,7 +562,7 @@
             font-size: 14px;
         }
         
-  .remove-item {
+ .remove-item {
             color: #d32f2f;
             background: none;
             border: none;
@@ -569,7 +570,7 @@
             font-size: 14px;
         }
         
-  .cart-total {
+ .cart-total {
             margin-top: 20px;
             padding-top: 15px;
             border-top: 1px solid #eee;
@@ -579,7 +580,7 @@
             font-weight: 600;
         }
         
-  .checkout-btn {
+ .checkout-btn {
             width: 100%;
             padding: 12px;
             background: #d32f2f;
@@ -592,17 +593,17 @@
             transition: background 0.3s;
         }
         
-  .checkout-btn:hover {
+ .checkout-btn:hover {
             background: #b71c1c;
         }
         
         /* Responsive Styles */
-   @media (max-width: 992px) {
+ @media (max-width: 992px) {
             .main-content {
                 flex-direction: column;
             }
             
-   .filters {
+ .filters {
                 width: 100%;
                 position: fixed;
                 top: 0;
@@ -613,58 +614,58 @@
                 padding-top: 60px;
             }
             
-  .filters.active {
+ .filters.active {
                 left: 0;
             }
             
-   .filter-toggle {
+ .filter-toggle {
                 display: block;
             }
             
-   .close-filters {
+ .close-filters {
                 display: block;
             }
             
-  .footer-content {
+ .footer-content {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
         
-   @media (max-width: 768px) {
+ @media (max-width: 768px) {
             .product-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
             
-   .nav-links {
+ .nav-links {
                 display: none;
             }
             
-  .header-top {
+ .header-top {
                 flex-wrap: wrap;
                 gap: 15px;
             }
             
-   .cart-sidebar {
+ .cart-sidebar {
                 width: 100%;
                 right: -100%;
             }
         }
         
-   @media (max-width: 576px) {
+  @media (max-width: 576px) {
             .product-grid {
                 grid-template-columns: 1fr;
             }
             
-   .footer-content {
+ .footer-content {
                 grid-template-columns: 1fr;
             }
             
-  .products-header {
+ .products-header {
                 flex-direction: column;
                 align-items: flex-start;
             }
         }
-   </style>
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -688,13 +689,13 @@
         </div>
     </header>
 
-  <div class="container">
+ <div class="container">
         <button class="filter-toggle" id="filterToggle">
             <i class="fas fa-filter"></i> Filtrar Productos
         </button>
         
         <!-- Main Content -->
-   <div class="main-content">
+ <div class="main-content">
             <!-- Filters Section -->
             <aside class="filters" id="filters">
                 <h2 class="filter-title">
@@ -702,7 +703,7 @@
                     <span class="close-filters" id="closeFilters">&times;</span>
                 </h2>
                 
-   <div class="filter-section">
+<div class="filter-section">
                     <h3>DISPONIBILIDAD</h3>
                     <div class="filter-options">
                         <div class="filter-option">
@@ -716,7 +717,7 @@
                     </div>
                 </div>
                 
-  <div class="filter-section">
+ <div class="filter-section">
                     <h3>TIPO DE PRODUCTO</h3>
                     <div class="filter-options">
                         <div class="filter-option">
@@ -734,7 +735,7 @@
                     </div>
                 </div>
                 
-   <div class="filter-section">
+ <div class="filter-section">
                     <h3>COLOR</h3>
                     <div class="filter-options">
                         <div class="filter-option">
@@ -760,7 +761,7 @@
                     </div>
                 </div>
                 
-   <div class="filter-section">
+ <div class="filter-section">
                     <h3>PRECIO</h3>
                     <div class="filter-options">
                         <div class="filter-option">
@@ -782,11 +783,11 @@
                     </div>
                 </div>
                 
-  <button class="add-to-cart" id="applyFilters">Aplicar Filtros</button>
+<button class="add-to-cart" id="applyFilters">Aplicar Filtros</button>
             </aside>
             
             <!-- Products Section -->
-  <section class="products-section">
+ <section class="products-section">
                 <div class="products-header">
                     <div class="products-count">76 artículos</div>
                     <div class="sort-options">
@@ -801,7 +802,7 @@
                     </div>
                 </div>
                 
-  <div class="product-grid" id="productGrid">
+<div class="product-grid" id="productGrid">
                     <!-- Products will be dynamically inserted here -->
                 </div>
             </section>
@@ -825,7 +826,7 @@
     </div>
     
     <!-- Footer -->
-  <footer>
+<footer>
         <div class="footer-content">
             <div class="footer-column">
                 <h3>MBO</h3>
@@ -837,7 +838,7 @@
                 </ul>
             </div>
             
-   <div class="footer-column">
+ <div class="footer-column">
                 <h3>Servicio al cliente</h3>
                 <ul>
                     <li><a href="#">Preguntas frecuentes</a></li>
@@ -847,7 +848,7 @@
                 </ul>
             </div>
             
-   <div class="footer-column">
+ <div class="footer-column">
                 <h3>Contáctanos</h3>
                 <ul>
                     <li><i class="fas fa-phone"></i> (01) 640-9999</li>
@@ -862,7 +863,7 @@
                 </div>
             </div>
             
-   <div class="footer-column">
+ <div class="footer-column">
                 <h3>Suscríbete</h3>
                 <p>Recibe nuestras promociones y novedades</p>
                 <form style="margin-top: 15px;">
@@ -872,21 +873,23 @@
             </div>
         </div>
         
-  <div class="copyright">
+ <div class="copyright">
             © 2023 MBO - Todos los derechos reservados
         </div>
     </footer>
     
-   <script>
-        // Product data
+ <script>
+        // Product data with base names and color parts
         const products = [
             {
                 id: 1,
-                name: "FOLO MANGA CORTA BASICO CUELLO RE-DONDO VERDE OLIVO 0125",
+                baseName: "FOLO MANGA CORTA BASICO CUELLO RE-DONDO",
+                colorPart: "VERDE OLIVO",
+                code: "0125",
                 price: 79.00,
                 promo: "3 x 7,00",
                 colors: ["olive", "brown", "mustard"],
-                colorNames: ["Verde Olivo", "Marrón", "Mostaza"],
+                colorNames: ["VERDE OLIVO", "MARRÓN", "MOSTAZA"],
                 type: "polo",
                 availability: "stock",
                 color: "olive",
@@ -895,11 +898,13 @@
             },
             {
                 id: 2,
-                name: "FOLO MANGA CORTA BASICO CUELLO RE-DONDO MARRON 0125",
+                baseName: "FOLO MANGA CORTA BASICO CUELLO RE-DONDO",
+                colorPart: "MARRÓN",
+                code: "0125",
                 price: 79.00,
                 promo: "3 x 6,00",
                 colors: ["olive", "brown", "mustard"],
-                colorNames: ["Verde Olivo", "Marrón", "Mostaza"],
+                colorNames: ["VERDE OLIVO", "MARRÓN", "MOSTAZA"],
                 type: "polo",
                 availability: "stock",
                 color: "brown",
@@ -908,11 +913,13 @@
             },
             {
                 id: 3,
-                name: "FOLO MANGA CORTA BASICO CUELLO RE-DONDO MOSTAZA 0125",
+                baseName: "FOLO MANGA CORTA BASICO CUELLO RE-DONDO",
+                colorPart: "MOSTAZA",
+                code: "0125",
                 price: 79.00,
                 promo: "3 x 6,00",
                 colors: ["olive", "brown", "mustard"],
-                colorNames: ["Verde Olivo", "Marrón", "Mostaza"],
+                colorNames: ["VERDE OLIVO", "MARRÓN", "MOSTAZA"],
                 type: "polo",
                 availability: "stock",
                 color: "mustard",
@@ -921,11 +928,13 @@
             },
             {
                 id: 4,
-                name: "FOLO MANGA CORTA BASICO CUELLO RE-DONDO AZUL MARINO 0125",
+                baseName: "FOLO MANGA CORTA BASICO CUELLO RE-DONDO",
+                colorPart: "AZUL MARINO",
+                code: "0125",
                 price: 79.00,
                 promo: "3 x 7,00",
                 colors: ["olive", "blue", "mustard"],
-                colorNames: ["Verde Olivo", "Azul Marino", "Mostaza"],
+                colorNames: ["VERDE OLIVO", "AZUL MARINO", "MOSTAZA"],
                 type: "polo",
                 availability: "stock",
                 color: "blue",
@@ -934,11 +943,13 @@
             },
             {
                 id: 5,
-                name: "FOLO MANGA CORTA BASICO CUELLO RE-DONDO NEGRO 0125",
+                baseName: "FOLO MANGA CORTA BASICO CUELLO RE-DONDO",
+                colorPart: "NEGRO",
+                code: "0125",
                 price: 79.00,
                 promo: "3 x 7,00",
                 colors: ["black", "brown", "mustard"],
-                colorNames: ["Negro", "Marrón", "Mostaza"],
+                colorNames: ["NEGRO", "MARRÓN", "MOSTAZA"],
                 type: "polo",
                 availability: "stock",
                 color: "black",
@@ -947,11 +958,13 @@
             },
             {
                 id: 6,
-                name: "FOLO MANGA CORTA BASICO CUELLO RE-DONDO ROJO 0125",
+                baseName: "FOLO MANGA CORTA BASICO CUELLO RE-DONDO",
+                colorPart: "ROJO",
+                code: "0125",
                 price: 79.00,
                 promo: "3 x 7,00",
                 colors: ["red", "olive", "mustard"],
-                colorNames: ["Rojo", "Verde Olivo", "Mostaza"],
+                colorNames: ["ROJO", "VERDE OLIVO", "MOSTAZA"],
                 type: "polo",
                 availability: "stock",
                 color: "red",
@@ -960,11 +973,13 @@
             },
             {
                 id: 7,
-                name: "CAMISA MANGA LARGA CUADROS AZUL Y BLANCO",
+                baseName: "CAMISA MANGA LARGA CUADROS",
+                colorPart: "AZUL Y BLANCO",
+                code: "",
                 price: 99.00,
                 promo: "2 x 85,00",
                 colors: ["blue", "white"],
-                colorNames: ["Azul Marino", "Blanco"],
+                colorNames: ["AZUL MARINO", "BLANCO"],
                 type: "camisa",
                 availability: "stock",
                 color: "blue",
@@ -973,11 +988,13 @@
             },
             {
                 id: 8,
-                name: "PANTALÓN JEANS SLIM FIT AZUL OSCURO",
+                baseName: "PANTALÓN JEANS SLIM FIT",
+                colorPart: "AZUL OSCURO",
+                code: "",
                 price: 129.00,
                 promo: "",
                 colors: ["blue"],
-                colorNames: ["Azul Marino"],
+                colorNames: ["AZUL MARINO"],
                 type: "pantalon",
                 availability: "preorder",
                 color: "blue",
@@ -1137,10 +1154,10 @@
                 productCard.innerHTML = `
                     <div class="product-image">
                         ${product.promo ? `<div class="promo-badge">${product.promo}</div>` : ''}
-                        <img src="${product.image}" alt="${product.name}">
+                        <img src="${product.image}" alt="${product.baseName} ${product.colorPart} ${product.code}">
                     </div>
                     <div class="product-info">
-                        <div class="product-name">${product.name}</div>
+                        <div class="product-name">${product.baseName} ${product.colorPart} ${product.code}</div>
                         <div class="product-price">
                             <span class="current-price">S/.${product.price.toFixed(2)}</span>
                         </div>
@@ -1149,6 +1166,7 @@
                                 <div class="color-option ${color} ${color === product.color ? 'active' : ''}" 
                                      data-product="${product.id}" 
                                      data-color="${color}" 
+                                     data-color-name="${product.colorNames[index]}"
                                      title="${product.colorNames[index]}"></div>
                             `).join('')}
                         </div>
@@ -1168,14 +1186,25 @@
             });
         }
         
-        // Change product color
+        // Change product color and name
         function changeProductColor(e) {
             const colorOption = e.target;
             const productId = parseInt(colorOption.dataset.product);
             const color = colorOption.dataset.color;
+            const colorName = colorOption.dataset.colorName;
+            
+            // Find the product
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+            
+            // Update the product's color and colorPart
+            product.color = color;
+            product.colorPart = colorName;
+            
+            // Find the product card in the DOM
+            const productCard = colorOption.closest('.product-card');
             
             // Remove active class from all color options for this product
-            const productCard = colorOption.closest('.product-card');
             productCard.querySelectorAll('.color-option').forEach(option => {
                 option.classList.remove('active');
             });
@@ -1183,23 +1212,43 @@
             // Add active class to selected color
             colorOption.classList.add('active');
             
-            // Update product image (in a real app, this would fetch a new image)
-            const productImage = productCard.querySelector('.product-image img');
-            const product = products.find(p => p.id === productId);
+            // Update the product name
+            const productNameElement = productCard.querySelector('.product-name');
+            productNameElement.textContent = `${product.baseName} ${colorName} ${product.code}`;
             
-            // Simulate color change by adjusting the image
-            if (color === 'olive') {
-                productImage.style.filter = 'hue-rotate(100deg)';
-            } else if (color === 'brown') {
-                productImage.style.filter = 'hue-rotate(200deg)';
-            } else if (color === 'mustard') {
-                productImage.style.filter = 'hue-rotate(300deg)';
-            } else if (color === 'blue') {
-                productImage.style.filter = 'hue-rotate(180deg)';
-            } else if (color === 'black') {
-                productImage.style.filter = 'grayscale(100%) brightness(30%)';
-            } else if (color === 'red') {
-                productImage.style.filter = 'hue-rotate(0deg)';
+            // Update the product image (simulate with CSS filter)
+            const productImage = productCard.querySelector('.product-image img');
+            updateImageColor(productImage, color);
+        }
+        
+        // Update image color with CSS filter
+        function updateImageColor(imgElement, color) {
+            // Reset any previous filters
+            imgElement.style.filter = '';
+            
+            // Apply color-specific filters
+            switch(color) {
+                case 'olive':
+                    imgElement.style.filter = 'hue-rotate(100deg)';
+                    break;
+                case 'brown':
+                    imgElement.style.filter = 'hue-rotate(200deg)';
+                    break;
+                case 'mustard':
+                    imgElement.style.filter = 'hue-rotate(300deg)';
+                    break;
+                case 'blue':
+                    imgElement.style.filter = 'hue-rotate(180deg)';
+                    break;
+                case 'black':
+                    imgElement.style.filter = 'grayscale(100%) brightness(30%)';
+                    break;
+                case 'red':
+                    imgElement.style.filter = 'hue-rotate(0deg)';
+                    break;
+                case 'white':
+                    imgElement.style.filter = 'brightness(150%)';
+                    break;
             }
         }
         
@@ -1217,7 +1266,7 @@
             } else {
                 cart.push({
                     id: product.id,
-                    name: product.name,
+                    name: `${product.baseName} ${product.colorPart} ${product.code}`,
                     price: product.price,
                     image: product.image,
                     quantity: 1
